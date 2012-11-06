@@ -68,6 +68,11 @@ else
 	echo "<p>Data tidak ditemukan!</p>";
 	include('form_cari.php');
 }
+elseif($nama=="")
+{
+	echo "<p>Pencarian kosong!</p>";
+	include('form_cari.php');
+}
 mysql_close($koneksi);
 ?>
 
