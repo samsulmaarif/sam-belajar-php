@@ -55,8 +55,8 @@
 
 <?php
 $nilaicounter=("counter.txt");
-$pengunjung=file('$counter');
-$pengunjung['0']++;
+$pengunjung=file($nilaicounter);
+$pengunjung[0]++;
 $bukafile=fopen($nilaicounter,"w");
 fputs($bukafile,"$pengunjung[0]");
 fclose($bukafile);
