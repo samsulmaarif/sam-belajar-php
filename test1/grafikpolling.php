@@ -59,79 +59,58 @@ $pass = "maarif";
 $host = "localhost";
 $koneksi=mysql_connect($host,$user,$pass);
 mysql_select_db("test");
-$pemrograman = $_POST[pemrograman];
-if($pemrograman=="php")
-{
-	echo "<h3>Terima Kasih</h3><br>Bahasa pemrograman yang Anda pilih adalah PHP<br>";
-	$queryphp = 'select polling.php from polling';
-	$hasilphp = mysql_query($queryphp);
-	while($row=mysql_fetch_row($hasilphp))
-	{
-		$nilaiphp = $row[0];
-	}
-	$nilaiphp = $nilaiphp+1;
-	$insertphp = 'update polling set php='.$nilaiphp;
-	mysql_query($insertphp);
-}
-if($pemrograman=="java")
-{
-	echo "<h3>Terima Kasih</h3><br>Bahasa pemrograman yang Anda pilih adalah JAVA<br>";
-	$queryjava = 'select polling.java from polling';
-	$hasiljava = mysql_query($queryjava);
-	while($row=mysql_fetch_row($hasiljava))
-	{
-		$nilaijava = $row[0];
-	}
-	$nilaijava = $nilaijava+1;
-	$insertjava = 'update polling set java='.$nilaijava;
-	mysql_query($insertjava);
-}
-if($pemrograman=="vbnet")
-{
-	echo "<h3>Terima Kasih</h3><br>Bahasa pemrograman yang Anda pilih adalah VB.Net<br>";
-	$queryvbnet = 'select polling.vbnet from polling';
-	$hasilvbnet = mysql_query($queryvbnet);
-	while($row=mysql_fetch_row($hasilvbnet))
-	{
-		$nilaivbnet = $row[0];
-	}
-	$nilaivbnet = $nilaivbnet+1;
-	$insertvbnet = 'update polling set vbnet='.$nilaivbnet;
-	mysql_query($insertvbnet);
-}
-if($pemrograman=="perl")
-{
-	echo "<h3>Terima Kasih</h3><br>Bahasa pemrograman yang Anda pilih adalah Perl<br>";
-	$queryperl = 'select polling.perl from polling';
-	$hasilperl = mysql_query($queryperl);
-	while($row=mysql_fetch_row($hasilperl))
-	{
-		$nilaiperl = $row[0];
-	}
-	$nilaiperl = $nilaiperl+1;
-	$insertperl = 'update polling set perl='.$nilaiperl;
-	mysql_query($insertperl);
-}
-if($pemrograman=="c")
-{
-	echo "<h3>Terima Kasih</h3><br>Bahasa pemrograman yang Anda pilih adalah C#<br>";
-	$queryc = 'select polling.c from polling';
-	$hasilc = mysql_query($queryc);
-	while($row=mysql_fetch_row($hasilc))
-	{
-		$nilaic = $row[0];
-	}
-	$nilaic = $nilaic+1;
-	$insertc = 'update polling set c='.$nilaic;
-	mysql_query($insertc);
-}
+$query="select * from polling";
+$hasil = mysql_query($query);
+$row=mysql_fetch_row($hasil);
+$total = $row[0]+$row[1]+$row[2]+$row[3]+$row[4];
+$php = ($row[0]/$total)*100;
+$java = ($row[1]/$total)*100;
+$vb = ($row[2]/$total)*100;
+$perl = ($row[3]/$total)*100;
+$c = ($row[4]/$total)*100;
+?>
+
+<h1>Hasil Polling</h1>
+<h3>Bahasa pemrograman yang paling Anda sukai</h3>
+<table class="table table-striped" width="400" border="0">
+<tr>
+	<td width="64" height="34">PHP</td>
+	<td width="229"><img src="polling/php.svg" width="<?php echo $row[0]?>" height="20" /><?php echo " ".$row[0]?></td>
+	<td width="85"><?php echo $php."%";?></td>
+</tr>
+<tr>
+	<td width="64" height="34">JAVA</td>
+	<td width="229"><img src="polling/java.svg" width="<?php echo $row[1]?>" height="20" /><?php echo " ".$row[1]?></td>
+	<td width="85"><?php echo $java."%";?></td>
+</tr>
+<tr>
+	<td width="64" height="34">VB.Net</td>
+	<td width="229"><img src="polling/vbnet.svg" width="<?php echo $row[2]?>" height="20" /><?php echo " ".$row[2]?></td>
+	<td width="85"><?php echo $vb."%";?></td>
+</tr>
+<tr>
+	<td width="64" height="34">Perl</td>
+	<td width="229"><img src="polling/perl.svg" width="<?php echo $row[3]?>" height="20" /><?php echo " ".$row[3]?></td>
+	<td width="85"><?php echo $perl."%";?></td>
+</tr>
+<tr>
+	<td width="64" height="34">C#</td>
+	<td width="229"><img src="polling/c.svg" width="<?php echo $row[4]?>" height="20" /><?php echo " ".$row[4]?></td>
+	<td width="85"><?php echo $c."%";?></td>
+</tr>
+<tr>
+	<td><strong>Total</strong></td>
+	<td><?php echo $total;?></td>
+	<td></td>
+</tr>
+</table>
+
+<p><a href="polling.php" class="btn btn-primary">Kembali</a></p>
+
+<?php
 mysql_close($koneksi);
 ?>
-<br><br>
-<div class="controls">
-	<a href="polling.php" class="btn btn-primary">Kembali</a>
-	<a href="grafikpolling.php" class="btn btn-primary">Lihat Grafik</a>
-</div>
+
 </div> <!-- /container -->
 
     <!-- Le javascript
