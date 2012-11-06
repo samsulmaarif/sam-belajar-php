@@ -63,14 +63,14 @@ if($data=mysql_fetch_array($hasil))
 {
 	echo $data[0]." ".$data[1]." ".$data[2]." ".$data[3]."<br>";	
 }
-else
-{
-	echo "<p>Data tidak ditemukan!</p>";
-	include('form_cari.php');
-}
 elseif($nama=="")
 {
 	echo "<p>Pencarian kosong!</p>";
+	include('form_cari.php');
+}
+else
+{
+	echo "<p>Data tidak ditemukan!</p>";
 	include('form_cari.php');
 }
 mysql_close($koneksi);
