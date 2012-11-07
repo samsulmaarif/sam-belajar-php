@@ -54,24 +54,24 @@
     <div class="container">
 
 <?php
-$nama = $_POST['cari'];
+$cari = $_POST['cari'];
 $koneksi = mysql_connect("localhost","test","maarif");
 mysql_select_db("test");
-$query = "select * from pegawai where nama='$nama'";
+$query = "select * from pegawai where nama='$cari'";
 $hasil = mysql_query($query);
 if($data=mysql_fetch_array($hasil))
 {
 	echo $data[0]." ".$data[1]." ".$data[2]." ".$data[3]."<br>";	
 }
-elseif($nama=="")
+elseif($cari=="")
 {
-	echo "<p>Pencarian kosong!</p>";
 	include('form_cari.php');
+	echo "<p>Pencarian kosong!</p>";
 }
 else
 {
-	echo "<p>Data tidak ditemukan!</p>";
 	include('form_cari.php');
+	echo "<p>Data tidak ditemukan!</p>";
 }
 mysql_close($koneksi);
 ?>

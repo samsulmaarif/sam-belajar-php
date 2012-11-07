@@ -81,7 +81,8 @@ else
 	mysql_select_db('test');
 	
 	$query = "insert into pegawai1(nama,nip,golongan) values('".$name."','".$nip."','".$golongan."')";
-	echo 'Data berhasil disimpan <a href="tampil_data.php">tampilkan data.</a>';
+	echo '<p>Data berhasil disimpan.</p><br><br>';
+	echo '<a href="tampil_data.php" class="btn btn-primary">Tampilkan data.</a> <a href="form_input.php" class="btn btn-primary">Kembali</a>';
 	mysql_query($query);
 	mysql_close($koneksi);
 }

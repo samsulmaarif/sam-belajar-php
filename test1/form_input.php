@@ -59,19 +59,19 @@
   <div class="control-group">
     <label class="control-label" for="nama">Nama</label>
     <div class="controls">
-      <input class="span4" type="text" id="nama" placeholder="Tulis nama.... ">
+      <input class="span4" type="text" name="nama" id="nama" placeholder="Tulis nama.... ">
     </div>
   </div>
   <div class="control-group">
     <label class="control-label" for="nip">NIP</label>
     <div class="controls">
-      <input class="span2" type="text" id="nip" placeholder="Tulis NIP.... ">
+      <input class="span2" type="text" name="nip" id="nip" placeholder="Tulis NIP.... ">
     </div>
   </div>
   <div class="control-group">
     <label class="control-label" for="golongan">Golongan</label>
     <div class="controls">
-      <input class="span1" type="text" id="golongan" placeholder="Gol.... ">
+      <input class="span1" type="text" name="golongan" id="golongan" placeholder="Gol.... ">
     </div>
   </div>  
   <div class="control-group">
