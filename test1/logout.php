@@ -1,6 +1,6 @@
 <?php
 /*
- * berhasil_login.php
+ * logout.php
  * 
  * Copyright 2012 Samsul Maarif <samsul@studio>
  * 
@@ -23,17 +23,9 @@
  */
 include "blank.php";
 ?>
-<div class="container">
 <?php
 session_start();
-if(isset($_SESSION["user"]))
-{
-	echo "<h3>Selamat Datang ".$_SESSION["user"]."</h3><br>";
-}
-else
-{
-	header("location:login.php");
-}
+session_unset();
+session_destroy();
+header("location:login.php");
 ?>
-<a href="logout.php" class="btn btn-primary">Keluar</a>
-</div>

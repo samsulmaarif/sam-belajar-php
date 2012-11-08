@@ -70,6 +70,7 @@
   <div class="control-group">
     <div class="controls">
       <button type="submit" class="btn btn-primary">Login</button>
+      <a href="input_user.php" class="btn btn-primary">Daftar Baru</a>
     </div>
   </div>
 </form>

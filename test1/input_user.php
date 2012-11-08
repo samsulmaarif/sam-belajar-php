@@ -52,7 +52,9 @@
     </div>
 
 <div class="container">
-
+<h2>Daftar Baru</h2>
+<p>Sudah terdaftar? <a href="login.php">Login</a>.</p>
+<hr>
 <form class="form-horizontal" action="simpan_user.php" method="post">
   <div class="control-group">
     <label class="control-label" for="username">Nama</label>
