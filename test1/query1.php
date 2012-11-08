@@ -54,7 +54,7 @@
     <div class="container">
 
       <?php
-      $koneksi=mysql_connect("localhost","test","maarif");
+      $koneksi=mysql_connect("localhost","test","password");
       mysql_select_db("test");
       $query="select * from pegawai";
       $hasil=mysql_query($query);

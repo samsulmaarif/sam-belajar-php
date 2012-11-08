@@ -59,7 +59,7 @@ $nip = $_POST['nip'];
 $golongan = $_POST['golongan'];
 $host = "localhost";
 $user = "test";
-$pass = "maarif";
+$pass = "password";
 if($name==null)
 {
 	include('form_input.php');

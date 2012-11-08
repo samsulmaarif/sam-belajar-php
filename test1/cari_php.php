@@ -55,7 +55,7 @@
 
 <?php
 $cari = $_POST['cari'];
-$koneksi = mysql_connect("localhost","test","maarif");
+$koneksi = mysql_connect("localhost","test","password");
 mysql_select_db("test");
 $query = "select * from pegawai where nama='$cari'";
 $hasil = mysql_query($query);

@@ -75,7 +75,7 @@ elseif($password != $cocokkanpassword)
 }
 else
 {
-	$koneksi = mysql_connect("localhost","test","maarif");
+	$koneksi = mysql_connect("localhost","test","password");
 	mysql_select_db("test");
 	$query = "insert into user(username, password) values('".$username."','".$password."')";
 	mysql_query($query);

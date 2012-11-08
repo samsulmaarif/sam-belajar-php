@@ -55,7 +55,7 @@
 
 <?php
 $user = "test";
-$pass = "maarif";
+$pass = "password";
 $host = "localhost";
 $koneksi=mysql_connect($host,$user,$pass);
 mysql_select_db("test");

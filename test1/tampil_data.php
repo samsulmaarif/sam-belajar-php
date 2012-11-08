@@ -62,7 +62,7 @@
 	<td width="90" bgcolor="#FFFF99"><div align="center"><strong>GOLONGAN</strong></div></td>
 	</tr>
 	<?php
-	$koneksi = mysql_connect("localhost","test","maarif");
+	$koneksi = mysql_connect("localhost","test","password");
 	mysql_select_db("test");
 	$query = "select * from pegawai1";
 	$hasil = mysql_query($query);

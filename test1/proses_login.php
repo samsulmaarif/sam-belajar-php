@@ -36,7 +36,7 @@ elseif($password == md5 (""))
 }
 else
 {
-	$koneksi = mysql_connect("localhost","test","maarif");
+	$koneksi = mysql_connect("localhost","test","password");
 	mysql_select_db("test");
 	$query = 'select * from user where username="'.$user.'"';
 	$hasil = mysql_query($query);

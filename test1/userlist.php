@@ -59,7 +59,7 @@
 	<td bgcolor="#0099FF"><div align="center"><strong>Nama User</strong></div></td>
 </tr>
 <?php
-$koneksi = mysql_connect("localhost","test","maarif");
+$koneksi = mysql_connect("localhost","test","password");
 mysql_select_db("test");
 $query = "select * from user";
 $hasil = mysql_query($query);
