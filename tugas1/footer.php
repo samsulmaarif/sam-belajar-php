@@ -1,3 +1,28 @@
+<?php
+/*
+ * footer.php
+ * 
+ * Copyright 2012 Samsul Maarif <samsul@samsul.web.id>
+ * 
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+ * MA 02110-1301, USA.
+ * 
+ * 
+ */
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,6 +34,7 @@
 
     <!-- Le styles -->
     <link href="../assets/css/bootstrap.css" rel="stylesheet">
+    <!-- <link href="../assets/css/docs.css" rel="stylesheet"> -->
     <style>
       body {
         padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
@@ -31,46 +57,18 @@
     <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
   </head>
 
-  <body>
-
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-          <a class="brand" href="index.php">Belajar PHP</a>
-          <div class="nav-collapse collapse">
-            <ul class="nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-            <?php 
-				include 'connectdb.php';
-			?>
-			<div class="navbar-form pull-right">
-            <?php
-			session_start();
-			if(isset($_SESSION["user"]))
-			{	echo "<p>Anda Login sebagai ".$_SESSION["user"]."</p><br>";
-			}	else  {
-				echo '<p><small>Selamat datang Tamu,<br>silahkan <a href="form_login.php">Login</a></small></p>';
-			} ?>
-            </div>
-          </div><!--/.nav-collapse -->
-        </div>
+<body>
+	
+    <!-- Footer
+    ================================================== -->
+    <footer class="footer">
+      <div class="container">
+		<hr>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>Dibuat dan didesain untuk mengerjakan tugas dari Dosen Pengampu <strong><a href="mailto:paketaplikasi1@gmail.com">H. Anton Sujarwo, S.T.</a></strong></p>
       </div>
-    </div>
-
-    <div class="container">
-
-
-
-    </div> <!-- /container -->
-
+    </footer>
+    
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -88,5 +86,5 @@
     <script src="../assets/js/bootstrap-carousel.js"></script>
     <script src="../assets/js/bootstrap-typeahead.js"></script>
 
-  </body>
+</body>
 </html>
