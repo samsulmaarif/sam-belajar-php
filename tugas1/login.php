@@ -28,35 +28,35 @@ include 'header.php';
 <?php
 $user = $_POST['username'];
 $password = md5 ($_POST['password']);
-if($user == "")
+if($user == null)
 {
 	header("location:form_login.php");
 }
-elseif($password == md5 (""))
+elseif($password == md5 (null))
 {
 	header("location:form_login.php");
 }
 else
 {
-	$koneksi = mysql_connect($dbhost,$dbuser,$dbpassword);
-	mysql_select_db($dtbase);
-	$query = 'select * from user where username="'.$user.'"';
+	$koneksi = mysql_connect($dbhost, $dbuser, $dbpassword);
+	mysql_select_db($dtbase, $koneksi) or die(mysql_error());
+	$query = "select * from user where username=' ".$user." '";
 	$hasil = mysql_query($query);
-	$row=mysql_fetch_array($hasil);
+	$row=mysql_fetch_array($hasil) or die(mysql_error());
 	$row[0];
 	$pengguna=$row[0];
-	if($row[0]=="")
+	if($row[0]==null)
 	{
-		include 'form_login.php';
 		echo "Username tidak ada... <br>";
+		include 'form_login.php';
 	}
 	else
 	{
-		$query = 'select * from user where password="'.$password.'"';
+		$query = "select * from user where password=' ".$password." '";
 		$hasil = mysql_query($query);
-		$row=mysql_fetch_array($hasil);
+		$row=mysql_fetch_array($hasil) or die(mysql_error());
 		$row[0];
-		if($row[0]=="")
+		if($row[0]==null)
 		{
 			echo "Password masih salah...";
 			include 'form_login.php';

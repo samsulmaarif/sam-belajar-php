@@ -51,13 +51,13 @@
             <?php 
 				include 'connectdb.php';
 			?>
-			<div class="navbar-form pull-right">
+			<div class="navbar-text pull-right">
             <?php
 			session_start();
-			if(isset($_SESSION["user"]))
-			{	echo "<p>Anda Login sebagai ".$_SESSION["user"]."</p><br>";
+			if(isset($_SESSION['user']))
+			{	echo "Anda Login sebagai ".$_SESSION['user']."<a href='logout.php'>Logout</a>";
 			}	else  {
-				echo '<p><small>Selamat datang Tamu,<br>silahkan <a href="form_login.php">Login</a></small></p>';
+				echo '<small>Selamat datang Tamu, silahkan <a href="form_login.php">Login</a></small>';
 			} ?>
             </div>
           </div><!--/.nav-collapse -->
