@@ -25,6 +25,7 @@ include 'header.php';
 ?>
 <div class="container">
 <h2>Daftar Baru</h2>
+<p>Sudah terdaftar? <a href="form_login.php">Login di sini</a>.</p>
 <hr>
 <form class="form-horizontal" action="_simpan.php" method="post">
   <div class="control-group">

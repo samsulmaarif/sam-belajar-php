@@ -1,3 +1,91 @@
-This project require database.
+Proyek ini adalah praktek dari sebuah buku karya Andreas Hery Prasetya,
+yang berjudul "Cepat Kuasai PHP + MySQL" ISBN : 978-979-29-1664-5
 
-mysqldump -u root -ppassword test > db/test1.sql
+Dalam proyek ini saya menggunakan bootstrap sebagai framework UInya.
+
+Berikut ini adalah struktur direktory proyek :
+
+../../
+├── assets
+│   ├── css
+│   │   ├── bootstrap.css
+│   │   ├── bootstrap.min.css
+│   │   ├── bootstrap-responsive.css
+│   │   ├── bootstrap-responsive.min.css
+│   │   └── docs.css
+│   ├── ico
+│   │   └── favicon.ico
+│   ├── img
+│   │   ├── glyphicons-halflings.png
+│   │   └── glyphicons-halflings-white.png
+│   └── js
+│       ├── bootstrap.js
+│       └── bootstrap.min.js
+├── db
+│   ├── polling.sql
+│   └── test1.sql
+├── README
+├── test1
+│   ├── angka
+│   │   ├── 0.svg
+│   │   ├── 1.svg
+│   │   ├── 2.svg
+│   │   ├── 3.svg
+│   │   ├── 4.svg
+│   │   ├── 5.svg
+│   │   ├── 6.svg
+│   │   ├── 7.svg
+│   │   ├── 8.svg
+│   │   └── 9.svg
+│   ├── berhasil_login.php
+│   ├── blank.php
+│   ├── cari_php.php
+│   ├── countergambar.php
+│   ├── countergambar.txt
+│   ├── counter.php
+│   ├── counter.txt
+│   ├── form_cari.php
+│   ├── form_input.php
+│   ├── grafikpolling.php
+│   ├── hasil_polling.php
+│   ├── input_user.php
+│   ├── login.php
+│   ├── logout.php
+│   ├── polling
+│   │   ├── c.svg
+│   │   ├── java.svg
+│   │   ├── perl.svg
+│   │   ├── php.svg
+│   │   └── vbnet.svg
+│   ├── polling.php
+│   ├── proses_login.php
+│   ├── query1.php
+│   ├── simpan_data.php
+│   ├── simpan_user.php
+│   ├── tampil_data.php
+│   └── userlist.php
+└── tugas1
+    ├── connectdb.php
+    ├── daftar.php
+    ├── footer.php
+    ├── form_login.php
+    ├── header.php
+    ├── index.php
+    ├── login.php
+    ├── logout.php
+    ├── _simpan.php
+    ├── sites
+    │   ├── input_pasien.php
+    │   └── static.php
+    └── tcal
+        ├── img
+        │   ├── cal.gif
+        │   ├── next_mon.gif
+        │   ├── next_year.gif
+        │   ├── no_cal.gif
+        │   ├── prev_mon.gif
+        │   └── prev_year.gif
+        ├── tcal.css
+        └── tcal.js
+
+13 directories, 68 files

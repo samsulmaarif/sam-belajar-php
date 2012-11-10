@@ -21,7 +21,7 @@
  * 
  * 
  */
-require 'connectdb.php';
+include 'connectdb.php';
 include 'header.php';
 ?>
 <div class="container">
