@@ -5,16 +5,16 @@
 // default settins - this structure can be moved in separate file in multilangual applications
 var A_TCALCONF = {
 	'cssprefix'  : 'tcal',
-	'months'     : ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-	'weekdays'   : ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
-	'longwdays'  : ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+	'months'     : ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'],
+	'weekdays'   : ['Mi', 'Se', 'Se', 'Ra', 'Ka', 'Ju', 'Sa'],
+	'longwdays'  : ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'],
 	'yearscroll' : true, // show year scroller
 	'weekstart'  : 0, // first day of week: 0-Su or 1-Mo
-	'prevyear'   : 'Previous Year',
-	'nextyear'   : 'Next Year',
-	'prevmonth'  : 'Previous Month',
-	'nextmonth'  : 'Next Month',
-	'format'     : 'd-m-Y' // 'd-m-Y', Y-m-d', 'l, F jS Y'
+	'prevyear'   : 'Tahun Sebelumnya',
+	'nextyear'   : 'Tahun Berikutnya',
+	'prevmonth'  : 'Bulan Sebelumnya',
+	'nextmonth'  : 'Bulan Berikutnya',
+	'format'     : 'D-M-Y' // 'd-m-Y', 'Y-m-d', 'l, F jS Y'
 };
 
 var A_TCALTOKENS = [

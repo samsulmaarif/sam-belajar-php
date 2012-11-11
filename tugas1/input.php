@@ -1,6 +1,6 @@
 <?php
 /*
- * _simpan.php
+ * input.php
  * 
  * Copyright 2012 Samsul Maarif <samsul@samsul.web.id>
  * 
@@ -21,39 +21,7 @@
  * 
  * 
  */
-require("connectdb.php");
+include("header.php");
+include("sites/input_pasien.php");
+include("footer.php");
 ?>
-<div class="container">
-<p>
-<?php
-$username = $_POST['username'];
-$password = md5 ($_POST['password']);
-$cocokkanpassword = md5 ($_POST['cocokkanpassword']);
-if($username==null)
-{
-	include "daftar.php";
-	echo "Nama masih kosong<br>";
-}
-elseif($password==null)
-{
-	include "daftar.php";
-	echo "Password masih kosong<br>";
-}
-elseif($password != $cocokkanpassword)
-{
-	include "daftar.php";
-	echo "Password yang Anda masukkan tidak sama<br>";
-}
-else
-{
-	$koneksi = mysql_connect($dbhost,$dbuser,$dbpassword);
-	mysql_select_db($dtbase);
-	$query = "insert into user(username, password) values('".$username."','".$password."')";
-	mysql_query($query);
-	mysql_close($koneksi);
-	echo "<h2>DATA BERHASIL DISIMPAN</h2>";
-	echo "login.php";
-}
-?>
-</p>
-</div>

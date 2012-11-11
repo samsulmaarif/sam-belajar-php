@@ -21,53 +21,22 @@
  * 
  * 
  */
-include '../header.php';
-include '../connectdb.php';
+include './header.php';
+include './connectdb.php';
 ?>
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Bootstrap, from Twitter</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
 
-    <!-- Le styles -->
-    <link href="../../assets/css/bootstrap.css" rel="stylesheet">
-    <style>
-      body {
-        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
-      }
-    </style>
-    <link href="../../assets/css/bootstrap-responsive.css" rel="stylesheet">
-    
-    <!-- link calendar resources -->
-	<link rel="stylesheet" type="text/css" href="../tcal/tcal.css" />
-	<script type="text/javascript" src="../tcal/tcal.js"></script>
+<div class="container">
+	<div class="row">		
+		<div class="span3">
+			<?php include("nav.php"); ?>
+		</div>
 
-    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+	<div class="span8>
 
-    <!-- Le fav and touch icons -->
-    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../assets/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../assets/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../assets/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="../../assets/ico/apple-touch-icon-57-precomposed.png">
-  </head>
-
-  <body>
-
-    <div class="container">
-
-      <h1>Input Data Pasien</h1>
-      <hr>
-<div class="row">
 <div class="span4">
-<form class="form-horizontal" action="../_simpan-pasien.php" method="post">
+	  <h1>Input Data Pasien</h1>
+      <hr>
+<form class="form-horizontal" action="simpan-pasien.php" method="post">
   <div class="control-group">
     <label class="control-label" for="fname">Nama Depan :</label>
     <div class="controls">
@@ -104,7 +73,7 @@ include '../connectdb.php';
   <div class="control-group">
     <label class="control-label" for="tmpLahir">Tempat lahir :</label>
     <div class="controls">
-      <input class="span3" type="text" name="tmpLahir">
+      <input class="span3" type="text" name="tmpLahir" data-provide="typeahead" data-items="5" data-source='["Tangerang","Serang","Lebak","Pandeglang","Cilegon","Tangerang Selatan","Bandung","Bandung Barat","Bekasi","Bogor","Ciamis","Cianjur","Cirebon","Garut","Indramayu","Karawang","Kuningan","Majalengka","Purwakarta","Subang","Sukabumi","Sumedang","Tasikmalaya","Banjar","Cimahi","Depok","Pangandaran","Jakarta Barat","Jakarta Pusat","Jakarta Selatan","Jakarta Timur","Jakarta Utara","Banjarnegara","Banyumas","Batang","Blora","Boyolali","Brebes","Cilacap","Demak","Grobogan","Jepara","Karanganyar","Kebumen","Kendal","Klaten","Kudus","Magelang","Pati","Pekalongan","Pemalang","Purbalingga","Purworejo","Rembang","Semarang","Sragen","Sukoharjo","Tegal","Temanggung","Wonogiri","Wonosobo","Magelang","Pekalongan","Salatiga","Surakarta","D.I. Yogyakarta"]'>
     </div>
   </div>
   <div class="control-group">
@@ -139,27 +108,7 @@ include '../connectdb.php';
   </div>
 </form>
 </div>
+</div> <!-- span4 -->
 
 </div>
     </div> <!-- /container -->
-
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="../../assets/js/jquery.js"></script>
-    <script src="../../assets/js/bootstrap-transition.js"></script>
-    <script src="../../assets/js/bootstrap-alert.js"></script>
-    <script src="../../assets/js/bootstrap-modal.js"></script>
-    <script src="../../assets/js/bootstrap-dropdown.js"></script>
-    <script src="../../assets/js/bootstrap-scrollspy.js"></script>
-    <script src="../../assets/js/bootstrap-tab.js"></script>
-    <script src="../../assets/js/bootstrap-tooltip.js"></script>
-    <script src="../../assets/js/bootstrap-popover.js"></script>
-    <script src="../../assets/js/bootstrap-button.js"></script>
-    <script src="../../assets/js/bootstrap-collapse.js"></script>
-    <script src="../../assets/js/bootstrap-carousel.js"></script>
-    <script src="../../assets/js/bootstrap-typeahead.js"></script>
-
-  </body>
-</html>
-<?php include '../footer.php'; ?>

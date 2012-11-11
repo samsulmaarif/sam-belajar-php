@@ -1,6 +1,6 @@
 <?php
 /*
- * _simpan-pasien.php
+ * simpan-pasien.php
  * 
  * Copyright 2012 Samsul Maarif <samsul@samsul.web.id>
  * 
@@ -21,7 +21,7 @@
  * 
  * 
  */
-require 'connectdb.php';
+require('connectdb.php');
 ?>
 <?php
 $fname = $_POST['fname'];
@@ -43,10 +43,10 @@ elseif($alamat=="") { echo "Pasien tinggal di mana...?"; }
 else {
 	$link=mysql_connect($dbhost, $dbuser, $dbpassword);
 	if(!$link) {
-		die("Tidak dapat tersambung ke database".mysql_error()); }
+		die('Tidak dapat tersambung ke database' . mysql_error()); }
 	mysql_select_db($dtbase, $link)
-		or die("Tidak dapat membuka database".mysql_error());
-	$sql = "INSERT INTO '".$dtbase."'.'pasien' values('".$fname."', '".$lname."', '".$jKelamin."', '".$gDarah."', '".$tmpLahir."', '".$alamat."', '".$diagnosa."', '".$catatan."')";
+		or die('Tidak dapat membuka database' . mysql_error());
+	$sql = "INSERT INTO `tugas1`.`pasien` (`id`, `fname`, `lname`, `jKelamin`, `gDarah`, `tmpLahir`, `tglLahir`, `alamat`, `diagnosa`, `catatan`) VALUES (NULL, `$fname`, `$lname`, `$jKelamin`, `$gDarah`, `$tmpLahir`, `$tglLahir`, `$alamat`, `$diagnosa`, `$catatan`);";
 	mysql_query($sql);
 	mysql_close();
 	echo "Data Pasien Berhasil Disimpan";

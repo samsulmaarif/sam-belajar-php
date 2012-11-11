@@ -67,7 +67,7 @@ else
 		{
 			session_start();
 			$_SESSION["user"]=$pengguna;
-			header("location:index.php");
+			include("index.php");
 		}
 	}
 	mysql_close($koneksi);

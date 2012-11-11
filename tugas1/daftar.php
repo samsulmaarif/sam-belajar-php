@@ -24,10 +24,15 @@
 include 'header.php';
 ?>
 <div class="container">
+	<div class="row">
+		<div class="span3">
+			<?php include("nav.php"); ?>
+		</div>
+		<div class="span5">
 <h2>Daftar Baru</h2>
 <p>Sudah terdaftar? <a href="form_login.php">Login di sini</a>.</p>
 <hr>
-<form class="form-horizontal" action="_simpan.php" method="post">
+<form class="form-horizontal" action="simpan.php" method="post">
   <div class="control-group">
     <label class="control-label" for="username">Nama</label>
     <div class="controls">
@@ -53,6 +58,7 @@ include 'header.php';
     </div>
   </div>
 </form>
-
+		</div> <!-- span4 -->
+	</div> <!-- row -->
 </div> <!-- /container -->
 <?php include 'footer.php'; ?>

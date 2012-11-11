@@ -24,8 +24,13 @@
 include 'header.php';
 ?>
 <div class="container">
+	<div class="row">
+	<div class="span3">
+	<?php include("nav.php"); ?>
+	</div>
+	<div class="span8">
 <h2>Form Login User</h2>
-<hr>
+<br>
 <form class="form-horizontal" action="login.php" method="post">
   <div class="control-group">
     <label class="control-label" for="username">Nama</label>
@@ -46,5 +51,7 @@ include 'header.php';
     </div>
   </div>
 </form>
+</div>
+</div> <!-- row -->
 </div> <!-- container -->
 <?php include 'footer.php'; ?>

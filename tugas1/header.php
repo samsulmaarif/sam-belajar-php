@@ -78,7 +78,7 @@
 	    ?>
 		<div class="navbar-text pull-right">
             	<?php
-		session_start();
+		//session_start();
 		if(isset($_SESSION['user']))
 		{	
 			echo "Anda Login sebagai ".$_SESSION['user']."<a href='logout.php'>Logout</a>";

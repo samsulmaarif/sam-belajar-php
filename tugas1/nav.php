@@ -1,6 +1,6 @@
 <?php
 /*
- * static-tentang.php
+ * nav.php
  * 
  * Copyright 2012 Samsul Maarif <samsul@samsul.web.id>
  * 
@@ -21,10 +21,22 @@
  * 
  * 
  */
-include("./header.php");
+require("header.php");
 ?>
-<div class="container">
-<?php include("nav.php"); ?>
-<h1 align="center">Tentang</h1>
-<p align="center">Sedikit penjelasan tentang aplikasi ini. Kalimatnya tidak perlu panjang lebar,<br> yang penting dapat dimengerti oleh pembacanya.</p>
-</div> <!-- container -->
+<html>
+<head>
+<!-- <link href="../assets/css/docs.css" rel="stylesheet"> -->
+</head>
+
+<body>
+    <!-- Docs nav
+    ================================================== -->
+      <div class="span2">
+        <ul class="nav nav-tabs nav-stacked">
+          <li><a href="daftar.php"><i class="icon-chevron-right"></i> Daftar</a></li>
+          <li><a href="input.php"><i class="icon-chevron-right"></i> Input Data</a></li>
+          <li><a href="cari.php"><i class="icon-chevron-right"></i> Cari</a></li>
+        </ul>
+      </div>
+</body>
+</html>
