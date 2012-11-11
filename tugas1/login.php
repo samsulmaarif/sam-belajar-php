@@ -21,8 +21,8 @@
  * 
  * 
  */
-include 'connectdb.php';
-include 'header.php';
+require("connectdb.php");
+include("header.php");
 ?>
 <div class="container">
 <?php
@@ -39,10 +39,12 @@ elseif($password == md5 (null))
 else
 {
 	$koneksi = mysql_connect($dbhost, $dbuser, $dbpassword);
-	mysql_select_db($dtbase, $koneksi) or die(mysql_error());
-	$query = "select * from user where username=' ".$user." '";
+	mysql_select_db($dtbase, $koneksi) 
+		or die(mysql_error());
+	$query = "SELECT * FROM user WHERE username='$user'";
 	$hasil = mysql_query($query);
-	$row=mysql_fetch_array($hasil) or die(mysql_error());
+	$row=mysql_fetch_array($hasil) 
+		or die(mysql_error());
 	$row[0];
 	$pengguna=$row[0];
 	if($row[0]==null)

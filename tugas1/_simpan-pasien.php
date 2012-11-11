@@ -45,11 +45,11 @@ else {
 	if(!$link) {
 		die("Tidak dapat tersambung ke database".mysql_error()); }
 	mysql_select_db($dtbase, $link)
-		or die("Tidak dapat membuka table".mysql_error());
-	$query = "INSERT INTO pasien values('.$fname.', '.$lname.', '.$jKelamin.', '.$gDarah.', '.$tmpLahir.', '.$alamat.', '.$diagnosa.', '.$catatan.')";
-	mysql_query($query);
+		or die("Tidak dapat membuka database".mysql_error());
+	$sql = "INSERT INTO '".$dtbase."'.'pasien' values('".$fname."', '".$lname."', '".$jKelamin."', '".$gDarah."', '".$tmpLahir."', '".$alamat."', '".$diagnosa."', '".$catatan."')";
+	mysql_query($sql);
 	mysql_close();
-	include 'sites/input_pasien.php';
 	echo "Data Pasien Berhasil Disimpan";
+	include 'index.php';
 }
 ?>

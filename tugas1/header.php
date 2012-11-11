@@ -74,16 +74,20 @@
               <li><a href="#contact">Contact</a></li>
             </ul>
             <?php 
-				include 'connectdb.php';
-			?>
-			<div class="navbar-text pull-right">
-            <?php
-			session_start();
-			if(isset($_SESSION['user']))
-			{	echo "Anda Login sebagai ".$_SESSION['user']."<a href='logout.php'>Logout</a>";
-			}	else  {
-				echo '<small>Selamat datang Tamu, silahkan <a href="form_login.php">Login</a></small>';
-			} ?>
+	    require("connectdb.php");
+	    ?>
+		<div class="navbar-text pull-right">
+            	<?php
+		session_start();
+		if(isset($_SESSION['user']))
+		{	
+			echo "Anda Login sebagai ".$_SESSION['user']."<a href='logout.php'>Logout</a>";
+		}	
+		else  
+		{
+			echo '<small>Selamat datang Tamu, silahkan <a href="form_login.php">Login</a></small>';
+		} 
+		?>
             </div>
           </div><!--/.nav-collapse -->
         </div>
