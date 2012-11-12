@@ -27,19 +27,19 @@ require("connectdb.php");
 <p>
 <?php
 $username = $_POST['username'];
-$password = md5 ($_POST['password']);
-$cocokkanpassword = md5 ($_POST['cocokkanpassword']);
-if($username==null)
+$password = $_POST['password'];
+$cocokkanpassword = $_POST['cocokkanpassword'];
+if ($username == null)
 {
 	include "daftar.php";
 	echo "Nama masih kosong<br>";
 }
-elseif($password==null)
+elseif ($password == null)
 {
 	include "daftar.php";
 	echo "Password masih kosong<br>";
 }
-elseif($password != $cocokkanpassword)
+elseif ($password != $cocokkanpassword)
 {
 	include "daftar.php";
 	echo "Password yang Anda masukkan tidak sama<br>";

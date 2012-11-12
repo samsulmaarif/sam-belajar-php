@@ -73,19 +73,19 @@
               <li><a href="tentang.php">Tentang</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
-            <?php 
-	    require("connectdb.php");
+        <?php 
+			require("connectdb.php");
 	    ?>
 		<div class="navbar-text pull-right">
-            	<?php
-		//session_start();
-		if(isset($_SESSION['user']))
+        <?php
+		session_start();
+		if(!isset($_SESSION['SESS_USER_NAME']))
 		{	
-			echo "Anda Login sebagai ".$_SESSION['user']."<a href='logout.php'>Logout</a>";
+			echo '<small>Selamat datang Tamu, silahkan <a href="form_login.php">Login</a></small>';
 		}	
 		else  
 		{
-			echo '<small>Selamat datang Tamu, silahkan <a href="form_login.php">Login</a></small>';
+			echo "<small>Anda Login sebagai ".$_SESSION['SESS_USER_NAME']." <a href='logout.php'>Logout</a></small>";
 		} 
 		?>
             </div>

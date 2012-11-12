@@ -1,6 +1,6 @@
 <?php
 /*
- * connectdb.php
+ * auth.php
  * 
  * Copyright 2012 Samsul Maarif <samsul@samsul.web.id>
  * 
@@ -19,13 +19,19 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
  * MA 02110-1301, USA.
  * 
+ * Credit : T. Surya Fajri <kilelme@gmail.com>
+ * Thanks for the code. :D
  * 
  */
 
 ?>
 <?php
-$dbhost = "localhost";
-$dbuser = "test";
-$dbpassword = "password";
-$dtbase = "tugas1";
+	//Start session
+	session_start();
+
+	//Check whether the session variable SESS_MEMBER_ID is present or not
+	if(!isset($_SESSION['SESS_MEMBER_ID']) || (trim($_SESSION['SESS_MEMBER_ID']) == '')) {
+		header("location: access-denied.php");
+		exit();
+	}
 ?>

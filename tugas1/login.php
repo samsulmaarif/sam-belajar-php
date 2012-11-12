@@ -20,57 +20,93 @@
  * MA 02110-1301, USA.
  * 
  * 
+ * Credit file : T. Surya Fajri <kilelme@gmail.com>
+ * Thanks for the code. :D
+ * 
  */
-require("connectdb.php");
-include("header.php");
 ?>
 <div class="container">
 <?php
-$user = $_POST['username'];
-$password = md5 ($_POST['password']);
-if($user == null)
-{
-	header("location:form_login.php");
-}
-elseif($password == md5 (null))
-{
-	header("location:form_login.php");
-}
-else
-{
-	$koneksi = mysql_connect($dbhost, $dbuser, $dbpassword);
-	mysql_select_db($dtbase, $koneksi) 
-		or die(mysql_error());
-	$query = "SELECT * FROM user WHERE username='$user'";
-	$hasil = mysql_query($query);
-	$row=mysql_fetch_array($hasil) 
-		or die(mysql_error());
-	$row[0];
-	$pengguna=$row[0];
-	if($row[0]==null)
-	{
-		echo "Username tidak ada... <br>";
-		include 'form_login.php';
+	//Start session
+	session_start();
+	
+	//Include database connection details
+	require_once('./connectdb.php');
+	
+	//Array to store validation errors
+	$errmsg_arr = array();
+	
+	//Validation error flag
+	$errflag = false;
+	
+	//Connect to mysql server
+	$link = mysql_connect($dbhost, $dbuser, $dbpassword);
+	if(!$link) {
+		die('Failed to connect to server: ' . mysql_error());
 	}
-	else
-	{
-		$query = "select * from user where password=' ".$password." '";
-		$hasil = mysql_query($query);
-		$row=mysql_fetch_array($hasil) or die(mysql_error());
-		$row[0];
-		if($row[0]==null)
-		{
-			echo "Password masih salah...";
-			include 'form_login.php';
-		}
-		else
-		{
-			session_start();
-			$_SESSION["user"]=$pengguna;
-			include("index.php");
-		}
+	
+	//Select database
+	$db = mysql_select_db($dtbase, $link);
+	if(!$db) {
+		die("Unable to select database");
 	}
-	mysql_close($koneksi);
-}
+	
+	//Function to sanitize values received from the form. Prevents SQL injection
+	function clean($str) {
+		$str = @trim($str);
+		if(get_magic_quotes_gpc()) {
+			$str = stripslashes($str);
+		}
+		return mysql_real_escape_string($str);
+	}
+	
+	//Sanitize the POST values
+	$login = clean($_POST['username']);
+	$pasw = clean($_POST['password']);
+	
+	//Input Validations
+	if($login == '') {
+		$errmsg_arr[] = 'Login ID missing';
+		$errflag = true;
+	}
+	if($pasw == '') {
+		$errmsg_arr[] = 'Password missing';
+		$errflag = true;
+	}
+	
+	//If there are input validations, redirect back to the login form
+	if($errflag) {
+		$_SESSION['ERRMSG_ARR'] = $errmsg_arr;
+		session_write_close();
+		header("location: index.php");
+		exit();
+	}
+	
+	//Create query
+	$qry="SELECT * FROM user WHERE username='$_POST[username]' AND password='$_POST[password]'";
+
+	$result=mysql_query($qry);
+	
+	//Check whether the query was successful or not
+	if($result) {
+		if(mysql_num_rows($result) == 1) {
+			//Login Successful
+			session_regenerate_id();
+			$member = mysql_fetch_assoc($result);
+			//$_SESSION['SESS_MEMBER_ID'] = $member['id_daftar'];
+			$_SESSION['SESS_USER_NAME'] = $member['username'];
+			//$_SESSION['SESS_LAST_NAME'] = $member['TxtNamaB'];
+			session_write_close();
+			header("location: index.php");
+			exit();
+		}else {
+			//Login failed
+			echo "Login Failed!";
+			include("login.php");
+			exit();
+		}
+	}else {
+		die("Query failed");
+	}
 ?>
 </div> <!-- container -->

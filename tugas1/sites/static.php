@@ -57,6 +57,11 @@
   <body>
 
     <div class="container">
+		<div class="row">
+			<div class="span3">
+				<?php include("nav.php"); ?>
+			</div>
+			<div class="span9">
 
       <h1>Bootstrap starter template</h1>
       <p>Animated Outline Menu<br>
@@ -84,7 +89,8 @@ Ajax Page Fetcher<br>
 This Ajax script lets you fetch another page's content (both needs to be from the same site) and display it on demand within the current page. You can further specify any external .js or .css files that should be loaded at the same time as the external page.<br>
 <br>
 </p>
-
+			</div> <!-- span9 -->
+		</div> <!-- row -->
     </div> <!-- /container -->
 
     <!-- Le javascript

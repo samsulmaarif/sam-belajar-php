@@ -1,11 +1,20 @@
+Author : Samsul Ma'arif <mail@samsul.web.id>
+
+
 Proyek ini adalah praktek dari sebuah buku karya Andreas Hery Prasetya,
 yang berjudul "Cepat Kuasai PHP + MySQL" ISBN : 978-979-29-1664-5
 
 Dalam proyek ini saya menggunakan bootstrap sebagai framework UInya.
 
+TODO :
+ * Membuat berkas README tiap direktori.
+ * membuat fitur pencarian, saat ini belum dibuat modul pencariannya.
+ * dll. (any ideas?)
+
 Berikut ini adalah struktur direktory proyek :
 
-../../
+sam-belajar-php/
+.
 ├── assets
 │   ├── css
 │   │   ├── bootstrap.css
@@ -65,27 +74,34 @@ Berikut ini adalah struktur direktory proyek :
 │   ├── tampil_data.php
 │   └── userlist.php
 └── tugas1
+    ├── auth.php
     ├── connectdb.php
     ├── daftar.php
     ├── footer.php
     ├── form_login.php
     ├── header.php
     ├── index.php
+    ├── input.php
     ├── login.php
+    ├── login.php.orig
     ├── logout.php
-    ├── _simpan.php
+    ├── nav.php
+    ├── simpan-pasien.php
+    ├── simpan.php
     ├── sites
     │   ├── input_pasien.php
-    │   └── static.php
-    └── tcal
-        ├── img
-        │   ├── cal.gif
-        │   ├── next_mon.gif
-        │   ├── next_year.gif
-        │   ├── no_cal.gif
-        │   ├── prev_mon.gif
-        │   └── prev_year.gif
-        ├── tcal.css
-        └── tcal.js
+    │   ├── static.php
+    │   └── static-tentang.php
+    ├── tcal
+    │   ├── img
+    │   │   ├── cal.gif
+    │   │   ├── next_mon.gif
+    │   │   ├── next_year.gif
+    │   │   ├── no_cal.gif
+    │   │   ├── prev_mon.gif
+    │   │   └── prev_year.gif
+    │   ├── tcal.css
+    │   └── tcal.js
+    └── tentang.php
 
-13 directories, 68 files
+13 directories, 75 files

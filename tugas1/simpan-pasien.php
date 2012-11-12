@@ -33,20 +33,17 @@ $tglLahir = $_POST['tglLahir'];
 $alamat = $_POST['alamat'];
 $diagnosa = $_POST['diagnosa'];
 $catatan = $_POST['catatan'];
-if($fname=="") { echo "Nama depan kosong"; }
-elseif($lname=="") { echo "Nama belakang kosong"; }
-elseif($jKelamin=="") { echo "Pilih jenis kelamin dulu..."; }
-elseif($gDarah=="") { echo "Pilih Gol. Darah dulu...."; }
-elseif($tmpLahir=="") { echo "Tempat lahir di mana?"; }
-elseif($tglLahir=="") { echo "Kapan tanggal lahirnya?"; }
-elseif($alamat=="") { echo "Pasien tinggal di mana...?"; }
+if($fname=="") || ($lname=="") || ($tmpLahir=="") || ($alamat=="") ($diagnosa=="") 
+{ 
+	echo "Lengkapi dulu data pasiennya.... "; 
+}
 else {
 	$link=mysql_connect($dbhost, $dbuser, $dbpassword);
 	if(!$link) {
 		die('Tidak dapat tersambung ke database' . mysql_error()); }
 	mysql_select_db($dtbase, $link)
 		or die('Tidak dapat membuka database' . mysql_error());
-	$sql = "INSERT INTO `tugas1`.`pasien` (`id`, `fname`, `lname`, `jKelamin`, `gDarah`, `tmpLahir`, `tglLahir`, `alamat`, `diagnosa`, `catatan`) VALUES (NULL, `$fname`, `$lname`, `$jKelamin`, `$gDarah`, `$tmpLahir`, `$tglLahir`, `$alamat`, `$diagnosa`, `$catatan`);";
+	$sql = "INSERT INTO pasien(id, fname, lname, jKelamin, gDarah, tmpLahir, tglLahir, alamat, diagnosa, catatan) VALUES(NULL,`".$fname."`,`".$lname."`,`".$jKelamin."`,`".$gDarah."`,`".$tmpLahir."`,`".$tglLahir."`,`".$alamat."`,`".$diagnosa."`,`".$catatan."`);";
 	mysql_query($sql);
 	mysql_close();
 	echo "Data Pasien Berhasil Disimpan";

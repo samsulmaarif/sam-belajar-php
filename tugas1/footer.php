@@ -65,7 +65,8 @@
       <div class="container">
 		<hr>
         <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>Dibuat dan didesain untuk mengerjakan tugas dari Dosen Pengampu <strong><a href="mailto:paketaplikasi1@gmail.com">H. Anton Sujarwo, S.T.</a></strong></p>
+        <p>Dibuat dan didesain untuk mengerjakan tugas dari Dosen Pengampu <strong>
+		<a href="mailto:paketaplikasi1@gmail.com">H. Anton Sujarwo, S.T.</a></strong></p>
         <p>Proyek ini dapat diakses secara online di <a href="http://code.google.com/p/sam-belajar-php">Google Code</a>.</p>
         <p>&copy; <strong><a href="http://www.samsul.web.id">Samsul Ma'arif</a></strong> 2012</p>
       </div>
