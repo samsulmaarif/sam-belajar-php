@@ -24,7 +24,14 @@
 include("./header.php");
 ?>
 <div class="container">
-<?php include("nav.php"); ?>
+	<div class="row">
+	<div class="span3">
+		<?php include("nav.php"); ?>
+	</div>
+	<div class="span9">
 <h1 align="center">Tentang</h1>
-<p align="center">Sedikit penjelasan tentang aplikasi ini. Kalimatnya tidak perlu panjang lebar,<br> yang penting dapat dimengerti oleh pembacanya.</p>
+<p align="center"><img href="http://id.wikipedia.org/wiki/Berkas:Piper_betle_leaf.jpg" src="gambar/220px-Piper_betle_leaf.jpg" class="img-rounded img-polaroid" width="125" height="200" alt="Daun Sirih"></p>
+<p align="center"><a href="http://id.wikipedia.org/wiki/Sirih">Sirih</a> merupakan tanaman asli Indonesia yang tumbuh merambat atau bersandar pada batang pohon lain. Sebagai budaya daun dan buahnya biasa dimakan dengan cara mengunyah bersama gambir, pinang dan kapur. Namun mengunyah sirih telah dikaitkan dengan penyakit kanker mulut dan pembentukan squamous cell carcinoma yang bersifat malignan.</p>
+	</div> <!-- span9 -->
+	</div> <!-- row -->
 </div> <!-- container -->

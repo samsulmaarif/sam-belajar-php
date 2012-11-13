@@ -62,33 +62,12 @@
 				<?php include("nav.php"); ?>
 			</div>
 			<div class="span9">
-
+				<div class="hero-unit">
       <h1>Selamat Datang <?php echo "".$_SESSION['SESS_USER_NAME'].""; ?> !</h1>
       <p class="lead">Anda berada di tempat yang tepat.</p>
 <p>This is a sleek drop down menu that can be associated with any "anchor" link on the page. As it drops down or contracts an animated "outline" effect is applied for good measure. The menu can be set to appear either via a "click" or "mouseover" of the anchor link.<br>
-<br>
-Inline HTML Tooltip<br>
-Inline HTML Tooltip lets you define rich HTML tooltips that are embedded directly inside your webpage and that appear when the mouse rolls over links on your page. The tooltip appears directly beneath the anchor link, and adjusts its position dynamically based on whether the mouse is too close to the window's edges.<br>
-<br>
-Document Text Resizer<br>
-This script adds the ability for your users to toggle your webpage's font size, with persistent cookies then used to remember the setting. The script works unobtrusively and with any webpage, by adding to the page one of several CSS classes that change the page's font size depending on the setting clicked on.<br>
-<br>
-Drop Down Panel script<br>
-Drop Down Panel adds a pull down panel to the top of your page that contains external content fetched via Ajax. Visitors click on the protruding button to cause the panel to drop down and reveal its content. Clicking anywhere on the panel again closes it.<br>
-<br>
-Overlap Image Viewer<br>
-Overlap Image Viewer lets you quickly associate an image with any element on your page, so that when the mouse rolls over it, the desired image is shown on top of it. A nice "dimming" effect is applied to the element while the loaded image is shown.<br>
-<br>
-Ajax Tooltip script<br>
-This Ajax script enhances the default "title" attribute of HTML so certain tooltips can instead get their contents from an external file, with rich HTML content and all. Integration is easy and non obtrusive.<br>
-<br>
-Fade In Content Viewer<br>
-This script turns ordinary HTML content wrapped around DIV tags into a series of interactive contents, with one faded into view on demand! You can use it to spotlight new or important contents on your site. And since each content is simply normal HTML on the page, setting it all up is painless.<br>
-<br>
-Ajax Page Fetcher<br>
-This Ajax script lets you fetch another page's content (both needs to be from the same site) and display it on demand within the current page. You can further specify any external .js or .css files that should be loaded at the same time as the external page.<br>
-<br>
 </p>
+				</div> <!-- hero-unit -->
 			</div> <!-- span9 -->
 		</div> <!-- row -->
     </div> <!-- /container -->

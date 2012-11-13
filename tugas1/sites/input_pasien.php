@@ -31,12 +31,11 @@ include './connectdb.php';
 			<?php include("nav.php"); ?>
 		</div>
 
-	<div class="span8>
+	<div class="span8">
 
-<div class="span4">
+<div class="span8 well"> 
 	  <h1>Input Data Pasien</h1>
       <hr>
-<div class="well">
 <form class="form-horizontal" action="simpan-pasien.php" method="post">
   <div class="control-group">
     <label class="control-label" for="fname">Nama Depan :</label>
@@ -74,7 +73,7 @@ include './connectdb.php';
   <div class="control-group">
     <label class="control-label" for="tmpLahir">Tempat lahir :</label>
     <div class="controls">
-      <input class="span3" type="text" name="tmpLahir" data-provide="typeahead" data-items="5" data-source="['Tangerang','Serang','Lebak','Pandeglang','Cilegon','Tangerang Selatan','Bandung','Bandung Barat','Bekasi','Bogor','Ciamis','Cianjur','Cirebon','Garut','Indramayu','Karawang','Kuningan','Majalengka','Purwakarta','Subang','Sukabumi','Sumedang','Tasikmalaya','Banjar','Cimahi','Depok','Pangandaran','Jakarta Barat','Jakarta Pusat','Jakarta Selatan','Jakarta Timur','Jakarta Utara','Banjarnegara','Banyumas','Batang','Blora','Boyolali','Brebes','Cilacap','Demak','Grobogan','Jepara','Karanganyar','Kebumen','Kendal','Klaten','Kudus','Magelang','Pati','Pekalongan','Pemalang','Purbalingga','Purworejo','Rembang','Semarang','Sragen','Sukoharjo','Tegal','Temanggung','Wonogiri','Wonosobo','Magelang','Pekalongan','Salatiga','Surakarta','D.I. Yogyakarta']">
+      <input class="span3" type="text" name="tmpLahir" data-provide="typeahead" data-items="5" data-sources="['Tangerang', 'Serang', 'Lebak', 'Pandeglang', 'Cilegon', 'Tangerang Selatan', 'Bandung', 'Bandung Barat', 'Bekasi', 'Bogor', 'Ciamis', 'Cianjur', 'Cirebon', 'Garut', 'Indramayu', 'Karawang', 'Kuningan', 'Majalengka', 'Purwakarta', 'Subang', 'Sukabumi', 'Sumedang', 'Tasikmalaya', 'Banjar', 'Cimahi', 'Depok', 'Pangandaran', 'Jakarta Barat', 'Jakarta Pusat', 'Jakarta Selatan', 'Jakarta Timur', 'Jakarta Utara', 'Banjarnegara', 'Banyumas', 'Batang', 'Blora', 'Boyolali', 'Brebes', 'Cilacap', 'Demak', 'Grobogan', 'Jepara', 'Karanganyar', 'Kebumen', 'Kendal', 'Klaten', 'Kudus', 'Magelang', 'Pati', 'Pekalongan', 'Pemalang', 'Purbalingga', 'Purworejo', 'Rembang', 'Semarang', 'Sragen', 'Sukoharjo', 'Tegal', 'Temanggung', 'Wonogiri', 'Wonosobo', 'Magelang', 'Pekalongan', 'Salatiga', 'Surakarta', 'D.I. Yogyakarta']">
     </div>
   </div>
   <div class="control-group">
@@ -108,7 +107,6 @@ include './connectdb.php';
     </div>
   </div>
 </form>
-</div> <!-- well -->
 </div>
 </div> <!-- span4 -->
 

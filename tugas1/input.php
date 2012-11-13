@@ -22,6 +22,7 @@
  * 
  */
 include("header.php");
+require_once("auth.php");
 include("sites/input_pasien.php");
 include("footer.php");
 ?>

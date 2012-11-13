@@ -9,6 +9,8 @@ Dalam proyek ini saya menggunakan bootstrap sebagai framework UInya.
 TODO :
  * Membuat berkas README tiap direktori.
  * membuat fitur pencarian, saat ini belum dibuat modul pencariannya.
+ * memerbanyak komentar di setiap baris kode untuk lebih mudah dipahami
+   dan dibaca, setidaknya untuk mengingatkan diri sendiri. :P
  * dll. (any ideas?)
 
 Berikut ini adalah struktur direktory proyek :
@@ -33,6 +35,7 @@ sam-belajar-php/
 ├── db
 │   ├── polling.sql
 │   └── test1.sql
+├── GPL-3
 ├── README
 ├── test1
 │   ├── angka
@@ -74,21 +77,25 @@ sam-belajar-php/
 │   ├── tampil_data.php
 │   └── userlist.php
 └── tugas1
+    ├── access-denied.php
     ├── auth.php
+    ├── cari.php
     ├── connectdb.php
     ├── daftar.php
     ├── footer.php
     ├── form_login.php
+    ├── gambar
+    │   └── jasjasan_merah.jpg
     ├── header.php
     ├── index.php
     ├── input.php
     ├── login.php
-    ├── login.php.orig
     ├── logout.php
     ├── nav.php
     ├── simpan-pasien.php
     ├── simpan.php
     ├── sites
+    │   ├── form_cari.php
     │   ├── input_pasien.php
     │   ├── static.php
     │   └── static-tentang.php
@@ -104,4 +111,4 @@ sam-belajar-php/
     │   └── tcal.js
     └── tentang.php
 
-13 directories, 75 files
+14 directories, 79 files

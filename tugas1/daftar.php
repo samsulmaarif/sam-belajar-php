@@ -28,11 +28,11 @@ include 'header.php';
 		<div class="span3">
 			<?php include("nav.php"); ?>
 		</div>
-		<div class="span5">
+		<div class="span8">
+			<div class="well">
 <h2>Daftar Baru</h2>
 <p>Sudah terdaftar? <a href="form_login.php">Login di sini</a>.</p>
 <hr>
-<div class="well">
 <form class="form-horizontal" action="simpan.php" method="post">
   <div class="control-group">
     <label class="control-label" for="username">Nama</label>

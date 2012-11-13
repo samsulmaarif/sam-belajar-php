@@ -21,7 +21,7 @@
  * 
  * 
  */
-require('connectdb.php');
+require("connectdb.php");
 ?>
 <?php
 $fname = $_POST['fname'];
@@ -33,20 +33,26 @@ $tglLahir = $_POST['tglLahir'];
 $alamat = $_POST['alamat'];
 $diagnosa = $_POST['diagnosa'];
 $catatan = $_POST['catatan'];
-if($fname=="" || $lname=="" || $tmpLahir=="" || $alamat=="" || $diagnosa=="") 
-{ 
-	echo "Lengkapi dulu data pasiennya.... "; 
-}
+if($fname=="") { echo "Nama depan kosong"; }
+elseif($lname=="") { echo "Nama Belakang kosong"; }
+elseif($tmpLahir=="") { echo "Tempat lahir kosong"; }
+elseif($alamat=="") { echo "alamat kosong"; } 
+elseif($diagnosa=="") { echo "penyakitnya apa om?"; }
 else {
 	$link=mysql_connect($dbhost, $dbuser, $dbpassword);
 	if(!$link) {
-		die('Tidak dapat tersambung ke database' . mysql_error()); }
+		die("Tidak dapat tersambung ke database" . mysql_error()); }
 	mysql_select_db($dtbase, $link)
-		or die('Tidak dapat membuka database' . mysql_error());
-	$sql = "INSERT INTO pasien(id, fname, lname, jKelamin, gDarah, tmpLahir, tglLahir, alamat, diagnosa, catatan) VALUES(NULL,`".$fname."`,`".$lname."`,`".$jKelamin."`,`".$gDarah."`,`".$tmpLahir."`,`".$tglLahir."`,`".$alamat."`,`".$diagnosa."`,`".$catatan."`);";
+		or die("Tidak dapat membuka database" . mysql_error());
+	$sql = "INSERT INTO pasien (
+		id, fname, lname, jKelamin, gDarah, tmpLahir, tglLahir, alamat, diagnosa, catatan
+		) 
+		VALUES (
+		NULL,`".$fname."`,`".$lname."`,`".$jKelamin."`,`".$gDarah."`,`".$tmpLahir."`,`".$tglLahir."`,`".$alamat."`,`".$diagnosa."`,`".$catatan."`
+		);";
 	mysql_query($sql);
 	mysql_close();
 	echo "Data Pasien Berhasil Disimpan";
-	include 'input.php';
+	include("input.php");
 }
 ?>

@@ -24,7 +24,10 @@
 include("header.php");
 ?>
 <div class="container">
-<h1 align="center">Akses Ditolak</h1>
+	<div class="alert alert-error">
+		<h1 align="center" class="error">Akses Ditolak</h1>
+	</div>
 <hr>
-<h4 align="center">Anda belum login</h4>
+<h4 align="center">Anda belum <a href="form_login.php">login</a></h4>
 </div>
+<?php include("footer.php"); ?>

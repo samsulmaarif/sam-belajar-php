@@ -31,7 +31,7 @@ require("header.php");
 <body>
     <!-- Docs nav
     ================================================== -->
-      <div class="span2">
+      <div class="span3-3">
         <ul class="nav nav-tabs nav-stacked">
           <li><a href="daftar.php"><i class="icon-chevron-right"></i> Daftar</a></li>
           <li><a href="input.php"><i class="icon-chevron-right"></i> Input Data</a></li>

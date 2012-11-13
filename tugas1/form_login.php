@@ -28,9 +28,9 @@ include 'header.php';
 	<div class="span3">
 	<?php include("nav.php"); ?>
 	</div>
-	<div class="span8">
+	<div class="span8 well">
 <h2>Form Login User</h2>
-<br>
+<hr>
 <form class="form-horizontal" action="login.php" method="post">
   <div class="control-group">
     <label class="control-label" for="username">Nama</label>

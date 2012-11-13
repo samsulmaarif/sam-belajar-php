@@ -31,84 +31,18 @@ include './connectdb.php';
 			<?php include("nav.php"); ?>
 		</div>
 
-	<div class="span8>
+	<div class="span8">
 
-<div class="span4">
-	  <h1>Input Data Pasien</h1>
+<div class="span8 well">
+	  <h1>Cari Data Pasien</h1>
       <hr>
-<div class="well">
-<form class="form-horizontal" action="simpan-pasien.php" method="post">
-  <div class="control-group">
-    <label class="control-label" for="fname">Nama Depan :</label>
-    <div class="controls">
-      <input class="span3" type="text" name="fname">
-    </div>
+<form class="form-search" action="form_cari.php?query" method="post">
+  <div class="input-append">
+    <input type="text" class="span2 search-query">
+    <button type="submit" class="btn">Search</button>
   </div>
-  <div class="control-group">
-    <label class="control-label" for="lname">Nama Belakang :</label>
-    <div class="controls">
-      <input class="span3" type="text" name="lname">
-    </div>
-  </div>
-  <div class="control-group">
-    <label class="control-label" for="text2">Jenis Kelamin :</label>
-    <div class="controls">
-      <select class="span2" name="jKelamin">
-		<option>Laki-Laki</option>
-		<option>Perempuan</option>
-      </select>
-    </div>
-  </div>
-  <div class="control-group">
-    <label class="control-label" for="text2">Gol. Darah :</label>
-    <div class="controls">
-      <select class="span1" name="gDarah">
-		<option>A</option>
-		<option>B</option>
-		<option>AB</option>
-		<option>O</option>
-      </select>
-    </div>
-  </div>
-
-  <div class="control-group">
-    <label class="control-label" for="tmpLahir">Tempat lahir :</label>
-    <div class="controls">
-      <input class="span3" type="text" name="tmpLahir" data-provide="typeahead" data-items="5" data-source="['Tangerang','Serang','Lebak','Pandeglang','Cilegon','Tangerang Selatan','Bandung','Bandung Barat','Bekasi','Bogor','Ciamis','Cianjur','Cirebon','Garut','Indramayu','Karawang','Kuningan','Majalengka','Purwakarta','Subang','Sukabumi','Sumedang','Tasikmalaya','Banjar','Cimahi','Depok','Pangandaran','Jakarta Barat','Jakarta Pusat','Jakarta Selatan','Jakarta Timur','Jakarta Utara','Banjarnegara','Banyumas','Batang','Blora','Boyolali','Brebes','Cilacap','Demak','Grobogan','Jepara','Karanganyar','Kebumen','Kendal','Klaten','Kudus','Magelang','Pati','Pekalongan','Pemalang','Purbalingga','Purworejo','Rembang','Semarang','Sragen','Sukoharjo','Tegal','Temanggung','Wonogiri','Wonosobo','Magelang','Pekalongan','Salatiga','Surakarta','D.I. Yogyakarta']">
-    </div>
-  </div>
-  <div class="control-group">
-    <label class="control-label" for="tglLahir">Tanggal Lahir :</label>
-    <div class="controls">
-      <input class="span2 tcal" type="text" name="tglLahir">
-    </div>
-  </div>
-  <div class="control-group">
-    <label class="control-label" for="alamat">Alamat :</label>
-    <div class="controls">
-      <textarea class="span3" rows="3" name="alamat"></textarea>
-    </div>
-  </div>
-  <div class="control-group">
-    <label class="control-label" for="diagnosa">Diagnosa :</label>
-    <div class="controls">
-      <input class="span3" type="text" name="diagnosa">
-    </div>
-  </div>
-  <div class="control-group">
-    <label class="control-label" for="catatan">Catatan :</label>
-    <div class="controls">
-      <textarea class="span3" rows="3" name="catatan"></textarea>
-    </div>
-  </div>          
-  <div class="control-group">
-    <div class="controls">
-      <button type="submit" class="btn btn-primary">Simpan</button>
-      <button type="reset" class="btn btn-primary">Reset</button>
-    </div>
-  </div>
+  <span class="help-block">&#42; <strong>Hint :</strong> Cari pasien berdasarkan nama atau alamat.</span>
 </form>
-</div> <!-- well -->
 </div>
 </div> <!-- span4 -->
 
