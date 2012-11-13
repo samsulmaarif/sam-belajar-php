@@ -1,6 +1,6 @@
 <?php
 /*
- * static.php
+ * form_cari.php
  * 
  * Copyright 2012 Samsul Maarif <samsul@samsul.web.id>
  * 

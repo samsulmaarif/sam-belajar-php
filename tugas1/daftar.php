@@ -32,6 +32,7 @@ include 'header.php';
 <h2>Daftar Baru</h2>
 <p>Sudah terdaftar? <a href="form_login.php">Login di sini</a>.</p>
 <hr>
+<div class="well">
 <form class="form-horizontal" action="simpan.php" method="post">
   <div class="control-group">
     <label class="control-label" for="username">Nama</label>
@@ -58,6 +59,7 @@ include 'header.php';
     </div>
   </div>
 </form>
+</div> <!-- well -->
 		</div> <!-- span4 -->
 	</div> <!-- row -->
 </div> <!-- /container -->

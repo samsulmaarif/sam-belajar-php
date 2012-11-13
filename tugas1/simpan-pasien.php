@@ -33,7 +33,7 @@ $tglLahir = $_POST['tglLahir'];
 $alamat = $_POST['alamat'];
 $diagnosa = $_POST['diagnosa'];
 $catatan = $_POST['catatan'];
-if($fname=="") || ($lname=="") || ($tmpLahir=="") || ($alamat=="") ($diagnosa=="") 
+if($fname=="" || $lname=="" || $tmpLahir=="" || $alamat=="" || $diagnosa=="") 
 { 
 	echo "Lengkapi dulu data pasiennya.... "; 
 }
@@ -47,6 +47,6 @@ else {
 	mysql_query($sql);
 	mysql_close();
 	echo "Data Pasien Berhasil Disimpan";
-	include 'index.php';
+	include 'input.php';
 }
 ?>

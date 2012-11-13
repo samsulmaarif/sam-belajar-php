@@ -63,9 +63,9 @@
 			</div>
 			<div class="span9">
 
-      <h1>Bootstrap starter template</h1>
-      <p>Animated Outline Menu<br>
-This is a sleek drop down menu that can be associated with any "anchor" link on the page. As it drops down or contracts an animated "outline" effect is applied for good measure. The menu can be set to appear either via a "click" or "mouseover" of the anchor link.<br>
+      <h1>Selamat Datang <?php echo "".$_SESSION['SESS_USER_NAME'].""; ?> !</h1>
+      <p class="lead">Anda berada di tempat yang tepat.</p>
+<p>This is a sleek drop down menu that can be associated with any "anchor" link on the page. As it drops down or contracts an animated "outline" effect is applied for good measure. The menu can be set to appear either via a "click" or "mouseover" of the anchor link.<br>
 <br>
 Inline HTML Tooltip<br>
 Inline HTML Tooltip lets you define rich HTML tooltips that are embedded directly inside your webpage and that appear when the mouse rolls over links on your page. The tooltip appears directly beneath the anchor link, and adjusts its position dynamically based on whether the mouse is too close to the window's edges.<br>
