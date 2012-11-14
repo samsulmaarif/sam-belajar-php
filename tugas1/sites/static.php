@@ -65,8 +65,13 @@
 				<div class="hero-unit">
       <h1>Selamat Datang <?php echo "".$_SESSION['SESS_USER_NAME'].""; ?> !</h1>
       <p class="lead">Anda berada di tempat yang tepat.</p>
-<p>This is a sleek drop down menu that can be associated with any "anchor" link on the page. As it drops down or contracts an animated "outline" effect is applied for good measure. The menu can be set to appear either via a "click" or "mouseover" of the anchor link.<br>
-</p>
+		<p><a href="http://id.wikipedia.org/wiki/Sirih">Sirih</a> merupakan 
+		tanaman asli Indonesia yang tumbuh merambat atau bersandar pada batang 
+		pohon lain. Sebagai budaya daun dan buahnya biasa dimakan dengan cara 
+		mengunyah bersama gambir, pinang dan kapur. Namun mengunyah sirih telah 
+		dikaitkan dengan penyakit kanker mulut dan pembentukan squamous cell 
+		carcinoma yang bersifat malignan. </p>
+
 				</div> <!-- hero-unit -->
 			</div> <!-- span9 -->
 		</div> <!-- row -->

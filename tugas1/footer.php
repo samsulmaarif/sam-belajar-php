@@ -69,7 +69,7 @@
         <p>Dibuat dan didesain untuk mengerjakan tugas dari Dosen Pengampu <strong>
 		<a href="mailto:paketaplikasi1@gmail.com">H. Anton Sujarwo, S.T.</a></strong></p>
         <p>Proyek ini dapat diakses secara online di <a href="http://code.google.com/p/sam-belajar-php">Google Code</a>.</p>
-        <p>Powered by : <a href="php.net">PHP</a> / <a href="http://twitter.github.com/bootstrap">Twitter Bootstrap</a> / <a href="http://httpd.apache.org/">Apache Webserver</a>.</p>
+        <p>Powered by : <a href="http://php.net">PHP</a> / <a href="http://twitter.github.com/bootstrap">Twitter Bootstrap</a> / <a href="http://httpd.apache.org/">Apache Webserver</a>.</p>
         <p>&copy; <strong><a href="http://www.samsul.web.id">Samsul Ma'arif</a></strong> 2012</p>
       </div>
     </footer>

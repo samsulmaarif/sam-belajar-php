@@ -37,6 +37,10 @@ require("header.php");
           <li><a href="input.php"><i class="icon-chevron-right"></i> Input Data</a></li>
           <li><a href="cari.php"><i class="icon-chevron-right"></i> Cari</a></li>
         </ul>
+        <div class="alert alert-success">
+			<?php echo "<p><strong>Qoutes :</strong></p>"; ?>
+			<?php $_GET['type'] = 0; include("sites/rantex.php"); ?>
+		</div>
       </div>
 </body>
 </html>

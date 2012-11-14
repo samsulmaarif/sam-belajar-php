@@ -25,7 +25,7 @@ include("header.php");
 ?>
 <div class="container">
 	<div class="alert alert-error">
-		<h1 align="center" class="error">Akses Ditolak</h1>
+		<h1 align="center">Akses Ditolak</h1>
 	</div>
 <hr>
 <h4 align="center">Anda belum <a href="form_login.php">login</a></h4>

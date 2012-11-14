@@ -1,17 +1,38 @@
-Author : Samsul Ma'arif <mail@samsul.web.id>
+Author       : Samsul Ma'arif <mail@samsul.web.id>
+Distribution : Sirih
 
+ Sirih merupakan tanaman asli Indonesia yang tumbuh merambat atau bersandar 
+ pada batang pohon lain. Sebagai budaya daun dan buahnya biasa dimakan 
+ dengan cara mengunyah bersama gambir, pinang dan kapur. Namun mengunyah 
+ sirih telah dikaitkan dengan penyakit kanker mulut dan pembentukan 
+ squamous cell carcinoma yang bersifat malignan. 
+ [http://id.wikipedia.org/wiki/Sirih]
 
 Proyek ini adalah praktek dari sebuah buku karya Andreas Hery Prasetya,
 yang berjudul "Cepat Kuasai PHP + MySQL" ISBN : 978-979-29-1664-5
 
-Dalam proyek ini saya menggunakan bootstrap sebagai framework UInya.
+Dalam proyek ini saya menggunakan bootstrap sebagai framework UInya, dan 
+php sebagai server side engine-nya.
 
 TODO :
  * Membuat berkas README tiap direktori.
  * membuat fitur pencarian, saat ini belum dibuat modul pencariannya.
  * memerbanyak komentar di setiap baris kode untuk lebih mudah dipahami
    dan dibaca, setidaknya untuk mengingatkan diri sendiri. :P
+ * membuat agar saat sudah login tidak perlu menampilkan form login maupun 
+   daftar (register) anggota baru.
+ * form input data masih belum dapat merecord data ke dalam basisdata 
+   (a.k.a database).
  * dll. (any ideas?)
+
+RESOURCES :
+ PHP : http://php.net
+ Twitter Bootstrap : http://twitter.github.com/bootstrap
+ Apache webserver : http://httpd.apache.org/
+ 
+Project Home Page : http://code.google.com/p/sam-belajar-php
+
+
 
 Berikut ini adalah struktur direktory proyek :
 
