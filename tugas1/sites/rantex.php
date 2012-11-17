@@ -36,7 +36,8 @@
    In this case set above variable to $settings['text_from_file'] = '';
 */
 $settings['quotes'] = array(
-'Open your mind, use <a href="http://opensource.org/">OpenSource</a>!',
+'<p>Open your mind, use <a href="http://opensource.org/">Open Source</a>!</p>
+<p align="right">--<a href="https://www.facebook.com/groups/linuxsidareja/">Linux Sidareja</a></p>',
 '"Manakala sesuatu bangsa telah sanggup mempertahankan negerinya dengan darahnya sendiri, dengan dagingnya sendiri, pada saat itu bangsa itu telah masak untuk kemerdekaan. Kalau bangsa kita, Indonesia, walaupun dengan bambu runcing, Saudara-saudara, semua siap sedia mati mempertahankan tanah air kita Indonesia, pada saat itu bangsa Indonesia adalah siap sedia, masak untuk merdeka."<br>
 ––<a href="http://id.wikiquote.org/wiki/Soekarno">Soekarno</a>, Pidato di BPUPKI, 1 Juni 1945',
 'Komputer membuat semua masalah menjadi mudah, tetapi kebanyakan masalah yang ia buat menjadi mudah adalah masalah yang tidak perlu diselesaikan.<p align="right">--<a href="http://id.wikipedia.org/wiki/Andy_Rooney">Andy Rooney</a></p>',
@@ -45,8 +46,10 @@ $settings['quotes'] = array(
 '<p>Setiap perjuangan selalu melahirkan sejumlah pengkhianat dan para penjilat.<br>
 Jangan kau gusar, Hadi.</p>
 <p align="right">--<a href="http://id.wikipedia.org/wiki/Taufiq_Ismail">Taufiq Ismail</a></p>',
-'Any single quotes \' must be escaped with a backslash',
-'A quote with a <a href="http://www.phpjunkyard.com">link</a>!',
+'<p>Saya mempunyai data yang membandingkan harga sekilo pesawat terbang dengan harga sekilo beras. Satu kilo pesawat harganya 30.000 dolar AS dan satu kilo beras harganya 7 sen. Jika Anda hendak membayar satu kilo barang berteknologi tinggi dengan satu kilo beras, rasanya kita tidak akan sanggup memenuhi permintaann tersebut.</p>
+<p align="right">--<a href="http://id.wikiquote.org/wiki/Baharuddin_Jusuf_Habibie">B.J. Habibie</a></p>',
+'<p>The government will have to spend money on training programmes for computer users to learn the new software. The budget may be the same as buying proprietary software, but it\'s a different kind of investment</p>
+<p align="right">--<a href="http://id.wikiquote.org/wiki/Budi_Rahardjo">Budi Raharjo</a></p>',
 );
 
 /*******************************************************************************

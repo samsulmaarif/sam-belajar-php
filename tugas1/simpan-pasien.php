@@ -22,8 +22,9 @@
  * 
  */
 require("connectdb.php");
-?>
+/*?>
 <?php
+
 $fname = $_POST['fname'];
 $lname = $_POST['lname'];
 $jKelamin = $_POST['jKelamin'];
@@ -33,26 +34,55 @@ $tglLahir = $_POST['tglLahir'];
 $alamat = $_POST['alamat'];
 $diagnosa = $_POST['diagnosa'];
 $catatan = $_POST['catatan'];
-if($fname=="") { echo "Nama depan kosong"; }
-elseif($lname=="") { echo "Nama Belakang kosong"; }
-elseif($tmpLahir=="") { echo "Tempat lahir kosong"; }
-elseif($alamat=="") { echo "alamat kosong"; } 
-elseif($diagnosa=="") { echo "penyakitnya apa om?"; }
-else {
+*/
+if($_POST['fname'] == "") 
+{ 
+	echo "Nama depan kosong"; 
+}
+elseif($_POST['lname'] == "") 
+{ 
+	echo "Nama Belakang kosong"; 
+}
+elseif($_POST['tmpLahir'] == "") 
+{ 
+	echo "Tempat lahir kosong"; 
+}
+elseif($_POST['alamat'] == "") 
+{ 
+	echo "alamat kosong"; 
+} 
+elseif($_POST['diagnosa'] == "") 
+{ 
+	echo "penyakitnya apa om?"; 
+}
+else 
+{
 	$link=mysql_connect($dbhost, $dbuser, $dbpassword);
-	if(!$link) {
-		die("Tidak dapat tersambung ke database" . mysql_error()); }
-	mysql_select_db($dtbase, $link)
-		or die("Tidak dapat membuka database" . mysql_error());
-	$sql = "INSERT INTO pasien (
-		id, fname, lname, jKelamin, gDarah, tmpLahir, tglLahir, alamat, diagnosa, catatan
-		) 
-		VALUES (
-		NULL,`".$fname."`,`".$lname."`,`".$jKelamin."`,`".$gDarah."`,`".$tmpLahir."`,`".$tglLahir."`,`".$alamat."`,`".$diagnosa."`,`".$catatan."`
-		);";
+	if(!$link) 
+	{
+		die(mysql_error()); 
+	}
+	$pildb=mysql_select_db($dtbase, $link);
+	if(!$pildb) 
+	{
+		die(mysql_error()); 
+	}
+	$sql = "INSERT INTO '".$dtbase."'pasien(fname,lname,jKelamin,gDarah,tmpLahir,tglLahir,alamat,diagnosa,catatan) VALUES(`".$_POST[fname]."`,`".$_POST[lname]."`,`".$_POST[jKelamin]."`,`".$_POST[gDarah]."`,`".$_POST[tmpLahir]."`,`".$_POST[tglLahir]."`,`".$_POST[alamat]."`,`".$_POST[diagnosa]."`,`".$_POST[catatan]."`)";
 	mysql_query($sql);
 	mysql_close();
 	echo "Data Pasien Berhasil Disimpan";
 	include("input.php");
 }
+
+/*
+	echo "$_POST[fname]<br>";
+	echo "$_POST[lname]<br>";
+	echo "$_POST[jKelamin]<br>";
+	echo "$_POST[gDarah]<br>";
+	echo "$_POST[tmpLahir]<br>";
+	echo "$_POST[tglLahir]<br>";
+	echo "$_POST[alamat]<br>";
+	echo "$_POST[diagnosa]<br>";
+	echo "$_POST[catatan]<br>";
+*/
 ?>

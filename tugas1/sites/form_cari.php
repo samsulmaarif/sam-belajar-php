@@ -27,7 +27,7 @@ include './connectdb.php';
 
 <div class="container">
 	<div class="row">		
-		<div class="span3">
+		<div class="span3-3">
 			<?php include("nav.php"); ?>
 		</div>
 
@@ -36,7 +36,7 @@ include './connectdb.php';
 <div class="span8 well">
 	  <h1>Cari Data Pasien</h1>
       <hr>
-<form class="form-search" action="form_cari.php?query" method="post">
+<form class="form-search" action="?query" method="post">
   <div class="input-append">
     <input type="text" class="span2 search-query">
     <button type="submit" class="btn">Search</button>
@@ -48,3 +48,7 @@ include './connectdb.php';
 
 </div>
     </div> <!-- /container -->
+<?php
+if(isset($_REQUEST[query]))
+	echo "<h1>Hasil Pencarian</h1>";
+?>

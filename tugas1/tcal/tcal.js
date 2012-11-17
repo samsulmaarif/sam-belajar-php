@@ -14,7 +14,7 @@ var A_TCALCONF = {
 	'nextyear'   : 'Tahun Berikutnya',
 	'prevmonth'  : 'Bulan Sebelumnya',
 	'nextmonth'  : 'Bulan Berikutnya',
-	'format'     : 'D-M-Y' // 'd-m-Y', 'Y-m-d', 'l, F jS Y'
+	'format'     : 'Y-m-d' // 'd-m-Y', 'Y-m-d', 'l, F jS Y'
 };
 
 var A_TCALTOKENS = [

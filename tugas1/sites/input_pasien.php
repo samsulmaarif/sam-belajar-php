@@ -27,7 +27,7 @@ include './connectdb.php';
 
 <div class="container">
 	<div class="row">		
-		<div class="span3">
+		<div class="span3-3">
 			<?php include("nav.php"); ?>
 		</div>
 
@@ -50,7 +50,7 @@ include './connectdb.php';
     </div>
   </div>
   <div class="control-group">
-    <label class="control-label" for="text2">Jenis Kelamin :</label>
+    <label class="control-label" for="jKelamin">Jenis Kelamin :</label>
     <div class="controls">
       <select class="span2" name="jKelamin">
 		<option>Laki-Laki</option>
@@ -59,7 +59,7 @@ include './connectdb.php';
     </div>
   </div>
   <div class="control-group">
-    <label class="control-label" for="text2">Gol. Darah :</label>
+    <label class="control-label" for="gDarah">Gol. Darah :</label>
     <div class="controls">
       <select class="span1" name="gDarah">
 		<option>A</option>
@@ -73,7 +73,8 @@ include './connectdb.php';
   <div class="control-group">
     <label class="control-label" for="tmpLahir">Tempat lahir :</label>
     <div class="controls">
-      <input class="span3" type="text" name="tmpLahir" data-provide="typeahead" data-items="5" data-sources="['Tangerang', 'Serang', 'Lebak', 'Pandeglang', 'Cilegon', 'Tangerang Selatan', 'Bandung', 'Bandung Barat', 'Bekasi', 'Bogor', 'Ciamis', 'Cianjur', 'Cirebon', 'Garut', 'Indramayu', 'Karawang', 'Kuningan', 'Majalengka', 'Purwakarta', 'Subang', 'Sukabumi', 'Sumedang', 'Tasikmalaya', 'Banjar', 'Cimahi', 'Depok', 'Pangandaran', 'Jakarta Barat', 'Jakarta Pusat', 'Jakarta Selatan', 'Jakarta Timur', 'Jakarta Utara', 'Banjarnegara', 'Banyumas', 'Batang', 'Blora', 'Boyolali', 'Brebes', 'Cilacap', 'Demak', 'Grobogan', 'Jepara', 'Karanganyar', 'Kebumen', 'Kendal', 'Klaten', 'Kudus', 'Magelang', 'Pati', 'Pekalongan', 'Pemalang', 'Purbalingga', 'Purworejo', 'Rembang', 'Semarang', 'Sragen', 'Sukoharjo', 'Tegal', 'Temanggung', 'Wonogiri', 'Wonosobo', 'Magelang', 'Pekalongan', 'Salatiga', 'Surakarta', 'D.I. Yogyakarta']">
+	  <script src="../assets/js/bootstrap-typeahead.js"></script>
+      <input class="span3" type="text" name="tmpLahir" data-provide="typeahead" data-items="5" data-source="['Tangerang', 'Serang', 'Lebak', 'Pandeglang', 'Cilegon', 'Tangerang Selatan', 'Bandung', 'Bandung Barat', 'Bekasi', 'Bogor', 'Ciamis', 'Cianjur', 'Cirebon', 'Garut', 'Indramayu', 'Karawang', 'Kuningan', 'Majalengka', 'Purwakarta', 'Subang', 'Sukabumi', 'Sumedang', 'Tasikmalaya', 'Banjar', 'Cimahi', 'Depok', 'Pangandaran', 'Jakarta Barat', 'Jakarta Pusat', 'Jakarta Selatan', 'Jakarta Timur', 'Jakarta Utara', 'Banjarnegara', 'Banyumas', 'Batang', 'Blora', 'Boyolali', 'Brebes', 'Cilacap', 'Demak', 'Grobogan', 'Jepara', 'Karanganyar', 'Kebumen', 'Kendal', 'Klaten', 'Kudus', 'Magelang', 'Pati', 'Pekalongan', 'Pemalang', 'Purbalingga', 'Purworejo', 'Rembang', 'Semarang', 'Sragen', 'Sukoharjo', 'Tegal', 'Temanggung', 'Wonogiri', 'Wonosobo', 'Magelang', 'Pekalongan', 'Salatiga', 'Surakarta', 'D.I. Yogyakarta']">
     </div>
   </div>
   <div class="control-group">

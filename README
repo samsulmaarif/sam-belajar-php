@@ -106,6 +106,7 @@ sam-belajar-php/
     ├── footer.php
     ├── form_login.php
     ├── gambar
+    │   ├── 220px-Piper_betle_leaf.jpg
     │   └── jasjasan_merah.jpg
     ├── header.php
     ├── index.php
@@ -118,6 +119,7 @@ sam-belajar-php/
     ├── sites
     │   ├── form_cari.php
     │   ├── input_pasien.php
+    │   ├── rantex.php
     │   ├── static.php
     │   └── static-tentang.php
     ├── tcal
@@ -132,4 +134,4 @@ sam-belajar-php/
     │   └── tcal.js
     └── tentang.php
 
-14 directories, 79 files
+14 directories, 81 files
