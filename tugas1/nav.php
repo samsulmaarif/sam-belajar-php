@@ -41,6 +41,11 @@ require("header.php");
 			<?php echo "<p><strong>Qoutes :</strong></p>"; ?>
 			<?php $_GET['type'] = 0; include("sites/rantex.php"); ?>
 		</div>
+		<div>
+			<p align="center"><?php echo '<a href="ymsgr:sendIM?samsul.ma_arif">
+			<img src="http://opi.yahoo.com/online?u=samsul.ma_arif&m=g&t=2" border="0" />
+			</a>'; ?></p>
+		</div>
       </div>
 </body>
 </html>
