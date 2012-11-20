@@ -50,59 +50,48 @@ if(isset($_REQUEST[query]))
 {
 	printf("<hr><h1 align='left'>Hasil Pencarian</h1>");
 	$keyword=$_POST['ktkunci'];
-	$todo=$_POST['todo'];
-	$tp=$_POST['tp'];
+	//$todo=$_POST['todo'];
+	//$tp=$_POST['tp'];
 	if (!$keyword) //jika katakunci kosong
 	{ 
 		printf("Masukkan kata kunci!");
 	}
 	else
 	{
-		if(isset($todo) and $todo=="search") //JIKA FORM TERISI
-		{
-			$keyword=ltrim($keyword);
-			$keyword=rtrim($keyword);
-		}
-		if($tp<>"any")
-		{ 
 			$koneksi = mysql_connect($dbhost,$dbuser,$dbpassword);
 			mysql_select_db($dtbase, $koneksi);	   
-			$q = "fname like '%$keyword%' or or lname like '%$keyword%' or alamat like '%$keyword%'";
+			$q = "fname like '%$keyword%' or lname like '%$keyword%' or alamat like '%$keyword%'";
 			$query="select * from tugas1.pasien where $q";
-		}
-
-	}  //akhir dari 'else'-nya keyword...
-  
-  	//hasil pencarian disini...
-	
-$resultcari= mysql_query($query) or die('
+			$resultcari= mysql_query($query) or die('
 							<div class="alert alert-error">
 							<button type="button" class="close" data-dismiss="alert">×</button>
 							<strong>Koplak</strong>, ora bisa ngundang data nang basisdata.
-							</div>');
-if (!$numrows)
-{echo "";}
-else { echo"<p align=justify style='margin-left: 70; margin-right:20'>";
-      if ($myrow = mysql_fetch_array($resultcari))
-          {
-          // display list if there are records to display
-          do
-            { 
-?>
-<br><font face="Verdana" style="font-size:9pt"><?php echo "<a href='detail.php?id=$myrow[id]'>$myrow[nama_pasien]";?></font>
-<?php
-           }
- 	  while ($myrow = mysql_fetch_array($resultcari));
-   		 // echo "<br>";
-           }
-
-echo "<br>";
-      }
-	  
-  } //akhir else todo ==search dan keyword tidak terisi (==terisi)
-  //akhir keyword-nya kosong
-  echo"<br>";
-
+							</div>'.mysql_error());
+			if($baris=mysql_fetch_array($resultcari))
+			{
+				printf('
+				<table class="table">
+				<tr>
+					<td>ID</td>
+					<td>Nama Depan</td>
+					<td>Nama Belakang</td>
+					<td>Jenis Kelamin</td>
+					<td>Gol. Darah</td>
+					<td>Tempat Lahir</td>
+					<td>Tgl. Lahir</td>
+					<td>Alamat</td>
+					<td>Diagnosa</td>
+					<td>Catatan</td>
+				</tr>
+				<tr>
+					<td>');
+					 
+						echo $baris[0]."</td><td>".$baris[1]."</td><td>".$baris[2]."</td><td>".$baris[3]."</td><td>".$baris[4]."</td><td>".$baris[5]."</td><td>".$baris[6]."</td><td>".$baris[7]."</td><td>".$baris[8]."</td><td>".$baris[9]."</td></tr>";
+			}
+			echo "</table>";
+			mysql_close($koneksi);
+	}  //akhir dari 'else'-nya keyword...
+}
 ?>
 </td></tr>
 	
