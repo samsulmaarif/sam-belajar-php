@@ -48,7 +48,8 @@ require_once("auth.php");
 <?php
 if(isset($_REQUEST[query]))
 {
-	printf("<hr><h1 align='left'>Hasil Pencarian</h1>");
+	//printf("<hr><h1 align='left'>Hasil Pencarian</h1>");
+	printf("<hr><p>Hasil pencarian untuk \"<strong>".$_POST['ktkunci']."</strong>\"</p>");
 	$keyword=$_POST['ktkunci'];
 	//$todo=$_POST['todo'];
 	//$tp=$_POST['tp'];
@@ -69,10 +70,11 @@ if(isset($_REQUEST[query]))
 							</div>'.mysql_error());
 			if($baris=mysql_fetch_array($resultcari))
 			{
+				$nomor = 0;
 				printf('
-				<table class="table">
+				<table class="table table-bordered table-hover">
 				<tr>
-					<td>ID</td>
+					<td>No</td>
 					<td>Nama Depan</td>
 					<td>Nama Belakang</td>
 					<td>Jenis Kelamin</td>
@@ -83,18 +85,30 @@ if(isset($_REQUEST[query]))
 					<td>Diagnosa</td>
 					<td>Catatan</td>
 				</tr>
-				<tr>
-					<td>');
-					 
+				');
+				
+				$nomor++;
+				printf('<tr>');
+				printf('<td>'.$nomor.'</td>');
+				printf('<td>'.$baris[1].'</td>');
+				printf('<td>'.$baris[2].'</td>');
+				printf('<td>'.$baris[3].'</td>');
+				printf('<td>'.$baris[4].'</td>');
+				printf('<td>'.$baris[5].'</td>');
+				printf('<td>'.$baris[6].'</td>');
+				printf('<td>'.$baris[7].'</td>');
+				printf('<td>'.$baris[8].'</td>');
+				printf('<td>'.$baris[9].'</td>');
+				printf('</tr>');
+				/*	 
 						echo $baris[0]."</td><td>".$baris[1]."</td><td>".$baris[2]."</td><td>".$baris[3]."</td><td>".$baris[4]."</td><td>".$baris[5]."</td><td>".$baris[6]."</td><td>".$baris[7]."</td><td>".$baris[8]."</td><td>".$baris[9]."</td></tr>";
+				*/
 			}
-			echo "</table>";
+			printf("</table>");
 			mysql_close($koneksi);
 	}  //akhir dari 'else'-nya keyword...
 }
 ?>
-</td></tr>
-	
 </div> <!-- well -->
 </div> <!-- span8 -->
 </div> <!-- row -->
