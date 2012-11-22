@@ -31,7 +31,7 @@ require_once("auth.php");
 			<?php include("nav.php"); ?>
 		</div>
 
-	<div class="span8">
+	<div class="span9">
 
 <div class="span8 well">
 	  <h1>Cari Data Pasien</h1>
@@ -68,11 +68,10 @@ if(isset($_REQUEST[query]))
 							<button type="button" class="close" data-dismiss="alert">×</button>
 							<strong>Koplak</strong>, ora bisa ngundang data nang basisdata.
 							</div>'.mysql_error());
-			if($baris=mysql_fetch_array($resultcari))
-			{
-				$nomor = 0;
+
+				$nomor = 0;				
 				printf('
-				<table class="table table-bordered table-hover">
+				<table class="table table-bordered">
 				<tr>
 					<td>No</td>
 					<td>Nama Depan</td>
@@ -86,24 +85,33 @@ if(isset($_REQUEST[query]))
 					<td>Catatan</td>
 				</tr>
 				');
-				
+
+			while($baris=mysql_fetch_array($resultcari))
+			{
 				$nomor++;
-				printf('<tr>');
-				printf('<td>'.$nomor.'</td>');
-				printf('<td>'.$baris[1].'</td>');
-				printf('<td>'.$baris[2].'</td>');
-				printf('<td>'.$baris[3].'</td>');
-				printf('<td>'.$baris[4].'</td>');
-				printf('<td>'.$baris[5].'</td>');
-				printf('<td>'.$baris[6].'</td>');
-				printf('<td>'.$baris[7].'</td>');
-				printf('<td>'.$baris[8].'</td>');
-				printf('<td>'.$baris[9].'</td>');
-				printf('</tr>');
-				/*	 
-						echo $baris[0]."</td><td>".$baris[1]."</td><td>".$baris[2]."</td><td>".$baris[3]."</td><td>".$baris[4]."</td><td>".$baris[5]."</td><td>".$baris[6]."</td><td>".$baris[7]."</td><td>".$baris[8]."</td><td>".$baris[9]."</td></tr>";
-				*/
+				$ndepan = $baris[1];
+				$nbelakang = $baris[2];
+				$kelamin = $baris[3];
+				$goldarah = $baris[4];
+				$tplahir = $baris[5];
+				$tglahir = $baris[6];
+				$alamate = $baris[7];
+				$diagnosae = $baris[8];
+				$catatane = $baris[9];
+				
+				printf("<tr>");
+				printf("<td>$nomor</td>\n");
+				printf("<td>$ndepan</td>\n");
+				printf("<td>$nbelakang</td>\n");
+				printf("<td>$kelamin</td>\n");
+				printf("<td>$goldarah</td>\n");
+				printf("<td>$tplahir</td>\n");
+				printf("<td>$tglahir</td>\n");
+				printf("<td>$alamate</td>\n");
+				printf("<td>$diagnosae</td>\n");
+				printf("<td>$catatane</td>\n");
 			}
+			printf("</tr>");
 			printf("</table>");
 			mysql_close($koneksi);
 	}  //akhir dari 'else'-nya keyword...

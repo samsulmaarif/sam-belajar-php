@@ -21,7 +21,7 @@
  * 
  * 
  */
-include 'header.php';
+include("header.php");
 ?>
 <div class="container">
 	<div class="row">
@@ -31,27 +31,43 @@ include 'header.php';
 	<div class="span8 well">
 <h2>Form Login User</h2>
 <hr>
-<form class="form-horizontal" action="login.php" method="post">
-  <div class="control-group">
-    <label class="control-label" for="username">Nama</label>
-    <div class="controls">
-      <input class="span3" type="text" name="username">
-    </div>
-  </div>
-  <div class="control-group">
-    <label class="control-label" for="password">Password</label>
-    <div class="controls">
-      <input class="span3" type="password" name="password">
-    </div>
-  </div>
-  <div class="control-group">
-    <div class="controls">
-      <button type="submit" class="btn btn-primary">Login</button>
-      <a href="daftar.php" class="btn btn-primary">Daftar Baru</a>
-    </div>
-  </div>
-</form>
+       <?php
+       // start the session
+       // This prevent login form after succesfully login
+		session_start();
+		if(!isset($_SESSION['SESS_USER_NAME']))
+		{	
+			echo '
+					<form class="form-horizontal" action="login.php" method="post">
+					  <div class="control-group">
+						<label class="control-label" for="username">Nama</label>
+						<div class="controls">
+						  <input class="span3" type="text" name="username">
+						</div>
+					  </div>
+					  <div class="control-group">
+						<label class="control-label" for="password">Password</label>
+						<div class="controls">
+						  <input class="span3" type="password" name="password">
+						</div>
+					  </div>
+					  <div class="control-group">
+						<div class="controls">
+						  <button type="submit" class="btn btn-primary">Login</button>
+						  <a href="daftar.php" class="btn btn-primary">Daftar Baru</a>
+						</div>
+					  </div>
+					</form>			
+				';
+		}	
+		else  
+		{
+			// show message wether user has login with any username, and give them logout option.
+			echo "Anda sudah Login sebagai ".$_SESSION['SESS_USER_NAME']." <a href='logout.php'>Logout</a>";
+		} 
+		?>
+ 
 </div>
 </div> <!-- row -->
 </div> <!-- container -->
-<?php include 'footer.php'; ?>
+<?php include("footer.php"); ?>
