@@ -8,27 +8,37 @@ Distribution : Sirih
  squamous cell carcinoma yang bersifat malignan. 
  [http://id.wikipedia.org/wiki/Sirih]
 
+ Di sini, sirih hanya merupakan nama kode untuk proyek aplikasi ini. Tidak 
+ bermaksud mengikat dengan hal apapun, namun ketika memberi nama saya hanya 
+ teringat mbah saya yang hingga saat ini masih 'memakan' daun ini untuk 
+ 'nginang'. Daun sirih ini juga memiliki banyak manfaat untuk kesehatan, 
+ yaitu untuk menyembuhkan berbagai macam penyakit. Selengkapnya bisa dibaca 
+ di www.manfaatdaunsirih.com.
+
 Proyek ini adalah praktek dari sebuah buku karya Andreas Hery Prasetya,
 yang berjudul "Cepat Kuasai PHP + MySQL" ISBN : 978-979-29-1664-5
+Pada akhirnya proyek ini saya gunakan untuk mengerjakan tugas dari dosen
+saya untuk membuat aplikasi input data pasien, dan modul pencariannya.
 
 Dalam proyek ini saya menggunakan bootstrap sebagai framework UInya, dan 
 php sebagai server side engine-nya.
 
 TODO :
  * Membuat berkas README tiap direktori.
- * membuat fitur pencarian, saat ini belum dibuat modul pencariannya.
+ * membuat fitur pencarian, saat ini belum dibuat modul pencariannya.[DONE]
  * memerbanyak komentar di setiap baris kode untuk lebih mudah dipahami
    dan dibaca, setidaknya untuk mengingatkan diri sendiri. :P
  * membuat agar saat sudah login tidak perlu menampilkan form login maupun 
-   daftar (register) anggota baru.
+   daftar (register) anggota baru. [DONE]
  * form input data masih belum dapat merecord data ke dalam basisdata 
-   (a.k.a database).
+   (a.k.a database).[DONE]
  * dll. (any ideas?)
 
 RESOURCES :
  PHP : http://php.net
  Twitter Bootstrap : http://twitter.github.com/bootstrap
  Apache webserver : http://httpd.apache.org/
+ Sumberdaya lain dapat dibaca di setiap kode sumber berkas yang ada.
  
 Project Home Page : http://code.google.com/p/sam-belajar-php
 
@@ -37,6 +47,7 @@ Project Home Page : http://code.google.com/p/sam-belajar-php
 Berikut ini adalah struktur direktory proyek :
 
 sam-belajar-php/
+
 .
 ├── assets
 │   ├── css
@@ -51,12 +62,30 @@ sam-belajar-php/
 │   │   ├── glyphicons-halflings.png
 │   │   └── glyphicons-halflings-white.png
 │   └── js
+│       ├── application.js
+│       ├── bootstrap-affix.js
+│       ├── bootstrap-alert.js
+│       ├── bootstrap-button.js
+│       ├── bootstrap-carousel.js
+│       ├── bootstrap-collapse.js
+│       ├── bootstrap-dropdown.js
 │       ├── bootstrap.js
-│       └── bootstrap.min.js
+│       ├── bootstrap.min.js
+│       ├── bootstrap.min.tmp.js
+│       ├── bootstrap-modal.js
+│       ├── bootstrap-popover.js
+│       ├── bootstrap-scrollspy.js
+│       ├── bootstrap-tab.js
+│       ├── bootstrap-tooltip.js
+│       ├── bootstrap-transition.js
+│       ├── bootstrap-typeahead.js
+│       ├── jquery.js
+│       └── README.md
 ├── db
 │   ├── polling.sql
 │   └── test1.sql
 ├── GPL-3
+├── index.php
 ├── README
 ├── test1
 │   ├── angka
@@ -117,7 +146,6 @@ sam-belajar-php/
     ├── simpan-pasien.php
     ├── simpan.php
     ├── sites
-    │   ├── form_cari.php
     │   ├── input_pasien.php
     │   ├── rantex.php
     │   ├── static.php
@@ -134,4 +162,4 @@ sam-belajar-php/
     │   └── tcal.js
     └── tentang.php
 
-14 directories, 81 files
+14 directories, 98 files

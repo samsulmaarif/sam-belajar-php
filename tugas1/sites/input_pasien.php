@@ -103,7 +103,6 @@ function cek_data()
   <div class="control-group">
     <label class="control-label" for="tmpLahir">Tempat lahir :</label>
     <div class="controls">
-	  <script src="../assets/js/bootstrap-typeahead.js"></script>
       <input class="span3" type="text" name="tmpLahir" data-provide="typeahead" data-items="4" data-source="['Tangerang', 'Serang', 'Lebak', 'Pandeglang', 'Cilegon', 'Tangerang Selatan', 'Bandung', 'Bandung Barat', 'Bekasi', 'Bogor', 'Ciamis', 'Cianjur', 'Cirebon', 'Garut', 'Indramayu', 'Karawang', 'Kuningan', 'Majalengka', 'Purwakarta', 'Subang', 'Sukabumi', 'Sumedang', 'Tasikmalaya', 'Banjar', 'Cimahi', 'Depok', 'Pangandaran', 'Jakarta Barat', 'Jakarta Pusat', 'Jakarta Selatan', 'Jakarta Timur', 'Jakarta Utara', 'Banjarnegara', 'Banyumas', 'Batang', 'Blora', 'Boyolali', 'Brebes', 'Cilacap', 'Demak', 'Grobogan', 'Jepara', 'Karanganyar', 'Kebumen', 'Kendal', 'Klaten', 'Kudus', 'Magelang', 'Pati', 'Pekalongan', 'Pemalang', 'Purbalingga', 'Purworejo', 'Rembang', 'Semarang', 'Sragen', 'Sukoharjo', 'Tegal', 'Temanggung', 'Wonogiri', 'Wonosobo', 'Magelang', 'Pekalongan', 'Salatiga', 'Surakarta', 'D.I. Yogyakarta']"><span class="help-inline"><font color="#DE1717">&lowast;</font></span>
     </div>
   </div>
